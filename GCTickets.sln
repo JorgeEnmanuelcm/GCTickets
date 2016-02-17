@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCTickets", "GCTickets\GCTickets.csproj", "{C6DB85E2-E21B-4C19-BE84-18730AB485ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{ECD9AAD8-BB1E-4554-9B5A-FA505009D0A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{2DF27FDC-E989-46F4-B00B-89EA64B9CB60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6DB85E2-E21B-4C19-BE84-18730AB485ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DB85E2-E21B-4C19-BE84-18730AB485ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DB85E2-E21B-4C19-BE84-18730AB485ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DB85E2-E21B-4C19-BE84-18730AB485ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD9AAD8-BB1E-4554-9B5A-FA505009D0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD9AAD8-BB1E-4554-9B5A-FA505009D0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD9AAD8-BB1E-4554-9B5A-FA505009D0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD9AAD8-BB1E-4554-9B5A-FA505009D0A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF27FDC-E989-46F4-B00B-89EA64B9CB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF27FDC-E989-46F4-B00B-89EA64B9CB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF27FDC-E989-46F4-B00B-89EA64B9CB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF27FDC-E989-46F4-B00B-89EA64B9CB60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
