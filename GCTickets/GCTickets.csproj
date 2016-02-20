@@ -113,10 +113,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GCTicketsDb.mdf">
+    <Content Include="DataBase\GCTicketsDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="GCTicketsDb_log.ldf">
+    <Content Include="DataBase\GCTicketsDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>

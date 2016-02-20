@@ -9,14 +9,13 @@ using System.Data;
 
 namespace DAL
 {
-    class ConexionDb
+    public class ConexionDb
     {
         private SqlConnection con;
         private SqlCommand Cmd;
 
         public ConexionDb()
         {
-            //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\JORGE\documents\visual studio 2015\Projects\GCTickets\GCTickets\GCTicketsDb.mdf";Integrated Security=True
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConStr"].ConnectionString);
             Cmd = new SqlCommand();
         }
