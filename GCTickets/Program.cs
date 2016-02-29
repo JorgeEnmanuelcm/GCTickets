@@ -16,7 +16,7 @@ namespace GCTickets
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PagPrincipalForm());
+            Application.Run(new PortadaPrincipal());
         }
     }
 }
