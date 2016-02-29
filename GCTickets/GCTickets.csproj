@@ -62,27 +62,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PagPrincipalForm.cs">
+    <Compile Include="PortadaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagPrincipalForm.Designer.cs">
-      <DependentUpon>PagPrincipalForm.cs</DependentUpon>
+    <Compile Include="PortadaPrincipal.Designer.cs">
+      <DependentUpon>PortadaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PagPrincipalForm.resx">
-      <DependentUpon>PagPrincipalForm.cs</DependentUpon>
+    <Compile Include="Registros\TipoEventoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\TipoEventoForm.Designer.cs">
+      <DependentUpon>TipoEventoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PortadaPrincipal.resx">
+      <DependentUpon>PortadaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Registros\TipoEventoForm.resx">
+      <DependentUpon>TipoEventoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,13 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Consultas\" />
-    <Folder Include="Registros\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1455583405_userconfig.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1455739878_create-ticket.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -120,6 +128,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\1456777108_userconfig.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
