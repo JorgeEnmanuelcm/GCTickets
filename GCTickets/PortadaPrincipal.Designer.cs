@@ -35,6 +35,8 @@
             this.registroTipoEvenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadatoolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadamenuStrip.SuspendLayout();
             this.PortadatoolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +44,8 @@
             // PortadamenuStrip
             // 
             this.PortadamenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrosToolStripMenuItem});
+            this.registrosToolStripMenuItem,
+            this.consultasToolStripMenuItem});
             this.PortadamenuStrip.Location = new System.Drawing.Point(0, 0);
             this.PortadamenuStrip.Name = "PortadamenuStrip";
             this.PortadamenuStrip.Size = new System.Drawing.Size(681, 24);
@@ -90,6 +93,21 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoEventoToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // tipoEventoToolStripMenuItem
+            // 
+            this.tipoEventoToolStripMenuItem.Name = "tipoEventoToolStripMenuItem";
+            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoEventoToolStripMenuItem.Text = "Tipo Evento";
+            this.tipoEventoToolStripMenuItem.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem_Click);
+            // 
             // PortadaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,5 +136,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroTipoEvenoToolStripMenuItem;
         private System.Windows.Forms.ToolStrip PortadatoolStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoEventoToolStripMenuItem;
     }
 }

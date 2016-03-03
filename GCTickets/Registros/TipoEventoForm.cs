@@ -29,19 +29,21 @@ namespace GCTickets.Registros
 
         private bool ObtenerDatos()
         {
-            bool Retorno = true;
+            bool Retorno = false;
             Error.Clear();
             if (DescripciontextBox.Text.Length > 0)
             {
                 TipoEvento.Descripcion = DescripciontextBox.Text;
+                Retorno = true;
             }
             else
             {
                 Error.SetError(DescripciontextBox, "Debe ingresar una descripcion");
+                Retorno = false;
             }
 
             return Retorno;
-        } 
+        }
 
         private void DevolverDatos()
         {
@@ -78,7 +80,11 @@ namespace GCTickets.Registros
                     else
                     {
                         MensajeError("No se han podido insertar datos");
+
                     }
+                }
+                if (IdTipoEventotextBox.Text.Length > 0)
+                {
                     if (TipoEvento.Editar())
                     {
                         MensajeOk("Se han modificado los datos correctamente");
@@ -124,7 +130,7 @@ namespace GCTickets.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            ObtenerDatos();
+            
             if (TipoEvento.Buscar(TipoEvento.TipoEventoId))
             {
                 Guardarbutton.Text = "Modificar";
@@ -135,6 +141,7 @@ namespace GCTickets.Registros
                 MensajeAdvertencia("Id no encontrado o no existe");
                 Limpiar();
             }
+            
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)

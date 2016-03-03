@@ -20,4 +20,3 @@ create table TipoEvento(
 TipoEventoId int primary key identity(1,1),
 Descripcion varchar(30)
 )
-

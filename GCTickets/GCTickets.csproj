@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\TipoEventoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\TipoEventoConsulta.Designer.cs">
+      <DependentUpon>TipoEventoConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="PortadaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Registros\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas\TipoEventoConsulta.resx">
+      <DependentUpon>TipoEventoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PortadaPrincipal.resx">
       <DependentUpon>PortadaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,9 +123,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Consultas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1455583405_userconfig.png" />
   </ItemGroup>
