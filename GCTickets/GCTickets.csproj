@@ -68,6 +68,12 @@
     <Compile Include="Consultas\TipoEventoConsulta.Designer.cs">
       <DependentUpon>TipoEventoConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\UsuariosConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\UsuariosConsulta.Designer.cs">
+      <DependentUpon>UsuariosConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="PortadaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="Consultas\TipoEventoConsulta.resx">
       <DependentUpon>TipoEventoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\UsuariosConsulta.resx">
+      <DependentUpon>UsuariosConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PortadaPrincipal.resx">
       <DependentUpon>PortadaPrincipal.cs</DependentUpon>

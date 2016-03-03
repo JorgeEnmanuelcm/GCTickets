@@ -66,6 +66,7 @@
             this.IdTipoEventotextBox.Name = "IdTipoEventotextBox";
             this.IdTipoEventotextBox.Size = new System.Drawing.Size(86, 20);
             this.IdTipoEventotextBox.TabIndex = 2;
+            this.IdTipoEventotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdTipoEventotextBox_KeyPress);
             // 
             // DescripciontextBox
             // 
@@ -73,6 +74,7 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(157, 20);
             this.DescripciontextBox.TabIndex = 3;
+            this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // Buscarbutton
             // 
@@ -138,6 +140,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void DescripciontextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void IdTipoEventotextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion

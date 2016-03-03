@@ -33,10 +33,11 @@
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroTipoEvenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PortadatoolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PortadatoolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadamenuStrip.SuspendLayout();
             this.PortadatoolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,22 @@
             this.registroTipoEvenoToolStripMenuItem.Text = "Registro Tipo Evento";
             this.registroTipoEvenoToolStripMenuItem.Click += new System.EventHandler(this.registroTipoEvenoToolStripMenuItem_Click);
             // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem,
+            this.tipoEventoToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // tipoEventoToolStripMenuItem
+            // 
+            this.tipoEventoToolStripMenuItem.Name = "tipoEventoToolStripMenuItem";
+            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoEventoToolStripMenuItem.Text = "Tipo Evento";
+            this.tipoEventoToolStripMenuItem.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem_Click);
+            // 
             // PortadatoolStrip
             // 
             this.PortadatoolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -93,20 +110,12 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // consultasToolStripMenuItem
+            // usuariosToolStripMenuItem
             // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoEventoToolStripMenuItem});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
-            // tipoEventoToolStripMenuItem
-            // 
-            this.tipoEventoToolStripMenuItem.Name = "tipoEventoToolStripMenuItem";
-            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.tipoEventoToolStripMenuItem.Text = "Tipo Evento";
-            this.tipoEventoToolStripMenuItem.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem_Click);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // PortadaPrincipal
             // 
@@ -138,5 +147,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoEventoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }

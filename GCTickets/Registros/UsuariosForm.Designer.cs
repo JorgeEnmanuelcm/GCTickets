@@ -57,6 +57,7 @@
             this.FotopictureBox = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.FotoopenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -192,6 +193,7 @@
             this.ConfirmarContraseniatextBox.Name = "ConfirmarContraseniatextBox";
             this.ConfirmarContraseniatextBox.Size = new System.Drawing.Size(165, 20);
             this.ConfirmarContraseniatextBox.TabIndex = 16;
+            this.ConfirmarContraseniatextBox.UseSystemPasswordChar = true;
             // 
             // ContraseniatextBox
             // 
@@ -199,6 +201,7 @@
             this.ContraseniatextBox.Name = "ContraseniatextBox";
             this.ContraseniatextBox.Size = new System.Drawing.Size(165, 20);
             this.ContraseniatextBox.TabIndex = 17;
+            this.ContraseniatextBox.UseSystemPasswordChar = true;
             // 
             // NombreUsuariotextBox
             // 
@@ -250,9 +253,9 @@
             // Nuevobutton
             // 
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(31, 329);
+            this.Nuevobutton.Location = new System.Drawing.Point(31, 371);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 65);
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 23);
             this.Nuevobutton.TabIndex = 25;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -287,11 +290,21 @@
             // 
             this.FotoopenFileDialog.FileName = "FotoopenFileDialog";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(123, 313);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Holaaaaa";
+            // 
             // UsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 417);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Buscarbutton);
@@ -356,5 +369,6 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.OpenFileDialog FotoopenFileDialog;
+        private System.Windows.Forms.Label label1;
     }
 }

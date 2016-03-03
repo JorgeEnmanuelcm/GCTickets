@@ -11,9 +11,9 @@ using BLL;
 
 namespace GCTickets.Consultas
 {
-    public partial class TipoEventoConsulta : Form
+    public partial class UsuariosConsulta : Form
     {
-        public TipoEventoConsulta()
+        public UsuariosConsulta()
         {
             InitializeComponent();
         }
@@ -28,7 +28,8 @@ namespace GCTickets.Consultas
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            TipoEventoClass Consulta = new TipoEventoClass();
+
+            UsuariosClass Consulta = new UsuariosClass();
             string filtro = "1=1";
 
             if (BuscartextBox.Text.Length > 0)
@@ -36,7 +37,7 @@ namespace GCTickets.Consultas
                 filtro = BuscarcomboBox.Text + " like '%" + BuscarcomboBox.Text + "%'";
             }
 
-            TipoEventodataGridView.DataSource = Consulta.Listado("TipoEventoId, Descripcion", filtro, "");
+            UsuariosdataGridView.DataSource = Consulta.Listado("UsuarioId, Nombres, Apellidos, Telefono, Email, Direccion, NombreUsuario, Contrasenia, ConfirmarContrasenia, EsActivo, Foto", filtro, "");
         }
     }
 }

@@ -15,6 +15,7 @@ namespace GCTickets.Registros
     {
         ErrorProvider Error = new ErrorProvider();
         TipoEventoClass TipoEvento = new TipoEventoClass();
+        int IdBuscado;
 
         public TipoEventoForm()
         {
@@ -29,17 +30,15 @@ namespace GCTickets.Registros
 
         private bool ObtenerDatos()
         {
-            bool Retorno = false;
+            bool Retorno = true;
             Error.Clear();
             if (DescripciontextBox.Text.Length > 0)
             {
                 TipoEvento.Descripcion = DescripciontextBox.Text;
-                Retorno = true;
             }
             else
             {
                 Error.SetError(DescripciontextBox, "Debe ingresar una descripcion");
-                Retorno = false;
             }
 
             return Retorno;
@@ -47,7 +46,6 @@ namespace GCTickets.Registros
 
         private void DevolverDatos()
         {
-            IdTipoEventotextBox.Text = TipoEvento.TipoEventoId.ToString();
             DescripciontextBox.Text = TipoEvento.Descripcion.ToString();
         }
 
@@ -130,9 +128,18 @@ namespace GCTickets.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            
-            if (TipoEvento.Buscar(TipoEvento.TipoEventoId))
+            int id;
+            int.TryParse(IdTipoEventotextBox.Text, out id);
+            IdBuscado = id;
+            if (IdTipoEventotextBox.Text.Length == 0)
             {
+                MessageBox.Show("Debe insertar un Id", "Error al Buscar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+            if (TipoEvento.Buscar(IdBuscado))
+            {
+                TipoEvento.TipoEventoId = IdBuscado;
                 Guardarbutton.Text = "Modificar";
                 DevolverDatos();
             }
@@ -141,7 +148,7 @@ namespace GCTickets.Registros
                 MensajeAdvertencia("Id no encontrado o no existe");
                 Limpiar();
             }
-            
+            }
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
