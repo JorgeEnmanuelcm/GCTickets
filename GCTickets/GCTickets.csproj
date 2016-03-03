@@ -135,10 +135,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\GCTicketsDb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DataBase\GCTicketsDb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>
     <None Include="Resources\1456777108_userconfig.png" />
