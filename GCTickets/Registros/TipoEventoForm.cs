@@ -15,11 +15,52 @@ namespace GCTickets.Registros
     {
         ErrorProvider Error = new ErrorProvider();
         TipoEventoClass TipoEvento = new TipoEventoClass();
-        int IdBuscado;
 
         public TipoEventoForm()
         {
             InitializeComponent();
+        }
+
+        private void DescripciontextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                Error.SetError(DescripciontextBox, "Este campo no acepta numeros ni caracteres especiales");
+            }
+        }
+
+        private void IdTipoEventotextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                Error.SetError(IdTipoEventotextBox, "Este campo solo acepta numeros");
+            }
         }
 
         private void Limpiar()
@@ -39,6 +80,7 @@ namespace GCTickets.Registros
             else
             {
                 Error.SetError(DescripciontextBox, "Debe ingresar una descripcion");
+                Retorno = false;
             }
 
             return Retorno;
@@ -108,6 +150,7 @@ namespace GCTickets.Registros
                     {
                         MensajeOk("Se ha eliminado correctamente");
                         Limpiar();
+                        Guardarbutton.Text = "Guardar";
                     }
                     else
                     {
@@ -130,16 +173,15 @@ namespace GCTickets.Registros
         {
             int id;
             int.TryParse(IdTipoEventotextBox.Text, out id);
-            IdBuscado = id;
-            if (IdTipoEventotextBox.Text.Length == 0)
+            if (id < 0)
             {
                 MessageBox.Show("Debe insertar un Id", "Error al Buscar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-            if (TipoEvento.Buscar(IdBuscado))
+            if (TipoEvento.Buscar(id))
             {
-                TipoEvento.TipoEventoId = IdBuscado;
+                Eliminarbutton.Enabled = true;
                 Guardarbutton.Text = "Modificar";
                 DevolverDatos();
             }
@@ -153,8 +195,15 @@ namespace GCTickets.Registros
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
+            Error.Clear();
+            Eliminarbutton.Enabled = false;
             Limpiar();
             Guardarbutton.Text = "Guardar";
+        }
+
+        private void TipoEventoForm_Load(object sender, EventArgs e)
+        {
+            Eliminarbutton.Enabled = false;
         }
     }
 }

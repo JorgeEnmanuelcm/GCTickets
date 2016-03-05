@@ -34,6 +34,7 @@
             this.BuscartextBox = new System.Windows.Forms.TextBox();
             this.BuscarcomboBox = new System.Windows.Forms.ComboBox();
             this.Buscarlabel = new System.Windows.Forms.Label();
+            this.CanttextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventodataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +89,19 @@
             this.Buscarlabel.TabIndex = 4;
             this.Buscarlabel.Text = "Buscar";
             // 
+            // CanttextBox
+            // 
+            this.CanttextBox.Location = new System.Drawing.Point(12, 240);
+            this.CanttextBox.Name = "CanttextBox";
+            this.CanttextBox.Size = new System.Drawing.Size(92, 20);
+            this.CanttextBox.TabIndex = 5;
+            // 
             // TipoEventoConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 261);
+            this.ClientSize = new System.Drawing.Size(509, 272);
+            this.Controls.Add(this.CanttextBox);
             this.Controls.Add(this.Buscarlabel);
             this.Controls.Add(this.BuscarcomboBox);
             this.Controls.Add(this.BuscartextBox);
@@ -114,5 +123,6 @@
         private System.Windows.Forms.TextBox BuscartextBox;
         private System.Windows.Forms.ComboBox BuscarcomboBox;
         private System.Windows.Forms.Label Buscarlabel;
+        private System.Windows.Forms.TextBox CanttextBox;
     }
 }

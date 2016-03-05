@@ -55,11 +55,11 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.FotopictureBox = new System.Windows.Forms.PictureBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.UsuarioserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.FotoopenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsuarioserrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // TelefonomaskedTextBox
@@ -282,9 +282,9 @@
             this.FotopictureBox.TabIndex = 20;
             this.FotopictureBox.TabStop = false;
             // 
-            // errorProvider1
+            // UsuarioserrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.UsuarioserrorProvider.ContainerControl = this;
             // 
             // FotoopenFileDialog
             // 
@@ -333,8 +333,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UsuariosForm";
             this.Text = "Registro de Usuarios";
+            this.Load += new System.EventHandler(this.UsuariosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsuarioserrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +368,7 @@
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider UsuarioserrorProvider;
         private System.Windows.Forms.OpenFileDialog FotoopenFileDialog;
         private System.Windows.Forms.Label label1;
     }

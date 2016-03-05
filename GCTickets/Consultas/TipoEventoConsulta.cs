@@ -37,6 +37,7 @@ namespace GCTickets.Consultas
             }
 
             TipoEventodataGridView.DataSource = Consulta.Listado("TipoEventoId, Descripcion", filtro, "");
+            CanttextBox.Text = TipoEventodataGridView.RowCount.ToString();
         }
     }
 }

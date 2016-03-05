@@ -34,10 +34,12 @@
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroTipoEvenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoEventoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadatoolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadamenuStrip.SuspendLayout();
             this.PortadatoolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +48,8 @@
             // 
             this.PortadamenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrosToolStripMenuItem,
-            this.consultasToolStripMenuItem});
+            this.consultasToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.PortadamenuStrip.Location = new System.Drawing.Point(0, 0);
             this.PortadamenuStrip.Name = "PortadamenuStrip";
             this.PortadamenuStrip.Size = new System.Drawing.Size(681, 24);
@@ -85,12 +88,34 @@
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
             // tipoEventoToolStripMenuItem
             // 
             this.tipoEventoToolStripMenuItem.Name = "tipoEventoToolStripMenuItem";
-            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.tipoEventoToolStripMenuItem.Text = "Tipo Evento";
             this.tipoEventoToolStripMenuItem.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoEventoToolStripMenuItem1});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // tipoEventoToolStripMenuItem1
+            // 
+            this.tipoEventoToolStripMenuItem1.Name = "tipoEventoToolStripMenuItem1";
+            this.tipoEventoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.tipoEventoToolStripMenuItem1.Text = "Tipo Evento";
+            this.tipoEventoToolStripMenuItem1.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem1_Click);
             // 
             // PortadatoolStrip
             // 
@@ -109,13 +134,6 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // PortadaPrincipal
             // 
@@ -148,5 +166,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoEventoToolStripMenuItem1;
     }
 }

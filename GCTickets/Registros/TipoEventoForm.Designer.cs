@@ -134,22 +134,15 @@
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.IdTipoEventolabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TipoEventoForm";
             this.Text = "Tipo Evento";
+            this.Load += new System.EventHandler(this.TipoEventoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventoerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
-
-        private void DescripciontextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void IdTipoEventotextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            throw new System.NotImplementedException();
         }
 
         #endregion
