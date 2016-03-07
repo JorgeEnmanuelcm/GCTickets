@@ -45,18 +45,21 @@
             // IdTipoEventolabel
             // 
             this.IdTipoEventolabel.AutoSize = true;
-            this.IdTipoEventolabel.Location = new System.Drawing.Point(73, 53);
+            this.IdTipoEventolabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdTipoEventolabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.IdTipoEventolabel.Location = new System.Drawing.Point(69, 55);
             this.IdTipoEventolabel.Name = "IdTipoEventolabel";
-            this.IdTipoEventolabel.Size = new System.Drawing.Size(21, 13);
+            this.IdTipoEventolabel.Size = new System.Drawing.Size(25, 14);
             this.IdTipoEventolabel.TabIndex = 0;
             this.IdTipoEventolabel.Text = "ID:";
             // 
             // Descripcionlabel
             // 
             this.Descripcionlabel.AutoSize = true;
-            this.Descripcionlabel.Location = new System.Drawing.Point(28, 118);
+            this.Descripcionlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descripcionlabel.Location = new System.Drawing.Point(16, 118);
             this.Descripcionlabel.Name = "Descripcionlabel";
-            this.Descripcionlabel.Size = new System.Drawing.Size(66, 13);
+            this.Descripcionlabel.Size = new System.Drawing.Size(80, 14);
             this.Descripcionlabel.TabIndex = 1;
             this.Descripcionlabel.Text = "Descripcion:";
             // 
@@ -124,6 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
             this.ClientSize = new System.Drawing.Size(297, 256);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -134,9 +138,8 @@
             this.Controls.Add(this.Descripcionlabel);
             this.Controls.Add(this.IdTipoEventolabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "TipoEventoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipo Evento";
             this.Load += new System.EventHandler(this.TipoEventoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventoerrorProvider)).EndInit();

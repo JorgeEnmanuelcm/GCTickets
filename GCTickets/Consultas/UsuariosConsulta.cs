@@ -38,6 +38,7 @@ namespace GCTickets.Consultas
             }
 
             UsuariosdataGridView.DataSource = Consulta.Listado("UsuarioId, Nombres, Apellidos, Telefono, Email, Direccion, NombreUsuario, Contrasenia, ConfirmarContrasenia, EsActivo, Foto", filtro, "");
+            CanttextBox.Text = UsuariosdataGridView.RowCount.ToString();
         }
     }
 }

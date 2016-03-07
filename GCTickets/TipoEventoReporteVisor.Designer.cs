@@ -30,13 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.TipoEventoreportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.GCTicketsDbDataSet = new GCTickets.GCTicketsDbDataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoEventoReporteVisor));
             this.TipoEventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GCTicketsDbDataSet = new GCTickets.GCTicketsDbDataSet();
+            this.TipoEventoreportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TipoEventoTableAdapter = new GCTickets.GCTicketsDbDataSetTableAdapters.TipoEventoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.GCTicketsDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCTicketsDbDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TipoEventoBindingSource
+            // 
+            this.TipoEventoBindingSource.DataMember = "TipoEvento";
+            this.TipoEventoBindingSource.DataSource = this.GCTicketsDbDataSet;
+            // 
+            // GCTicketsDbDataSet
+            // 
+            this.GCTicketsDbDataSet.DataSetName = "GCTicketsDbDataSet";
+            this.GCTicketsDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TipoEventoreportViewer
             // 
@@ -49,16 +60,6 @@
             this.TipoEventoreportViewer.Size = new System.Drawing.Size(424, 257);
             this.TipoEventoreportViewer.TabIndex = 0;
             // 
-            // GCTicketsDbDataSet
-            // 
-            this.GCTicketsDbDataSet.DataSetName = "GCTicketsDbDataSet";
-            this.GCTicketsDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TipoEventoBindingSource
-            // 
-            this.TipoEventoBindingSource.DataMember = "TipoEvento";
-            this.TipoEventoBindingSource.DataSource = this.GCTicketsDbDataSet;
-            // 
             // TipoEventoTableAdapter
             // 
             this.TipoEventoTableAdapter.ClearBeforeFill = true;
@@ -69,11 +70,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 261);
             this.Controls.Add(this.TipoEventoreportViewer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TipoEventoReporteVisor";
-            this.Text = "TipoEventoReporteVisor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tipo Evento Reporte";
             this.Load += new System.EventHandler(this.TipoEventoReporteVisor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GCTicketsDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCTicketsDbDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

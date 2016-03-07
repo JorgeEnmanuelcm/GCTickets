@@ -54,17 +54,16 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.FotopictureBox = new System.Windows.Forms.PictureBox();
             this.UsuarioserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.FotoopenFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).BeginInit();
+            this.FotopictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioserrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // TelefonomaskedTextBox
             // 
-            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(98, 175);
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(98, 194);
             this.TelefonomaskedTextBox.Mask = "(999)000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
             this.TelefonomaskedTextBox.Size = new System.Drawing.Size(155, 20);
@@ -76,153 +75,171 @@
             this.UsuarioIdtextBox.Name = "UsuarioIdtextBox";
             this.UsuarioIdtextBox.Size = new System.Drawing.Size(87, 20);
             this.UsuarioIdtextBox.TabIndex = 1;
+            this.UsuarioIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioIdtextBox_KeyPress);
             // 
             // ApellidostextBox
             // 
-            this.ApellidostextBox.Location = new System.Drawing.Point(98, 136);
+            this.ApellidostextBox.Location = new System.Drawing.Point(98, 149);
             this.ApellidostextBox.Name = "ApellidostextBox";
             this.ApellidostextBox.Size = new System.Drawing.Size(155, 20);
             this.ApellidostextBox.TabIndex = 2;
+            this.ApellidostextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidostextBox_KeyPress);
             // 
             // NombrestextBox
             // 
-            this.NombrestextBox.Location = new System.Drawing.Point(98, 91);
+            this.NombrestextBox.Location = new System.Drawing.Point(98, 109);
             this.NombrestextBox.Name = "NombrestextBox";
             this.NombrestextBox.Size = new System.Drawing.Size(155, 20);
             this.NombrestextBox.TabIndex = 3;
+            this.NombrestextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombrestextBox_KeyPress);
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(98, 263);
+            this.DirecciontextBox.Location = new System.Drawing.Point(98, 288);
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(155, 20);
             this.DirecciontextBox.TabIndex = 4;
             this.DirecciontextBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.DirecciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DirecciontextBox_KeyPress);
             // 
             // EmailtextBox
             // 
-            this.EmailtextBox.Location = new System.Drawing.Point(98, 222);
+            this.EmailtextBox.Location = new System.Drawing.Point(98, 240);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(155, 20);
             this.EmailtextBox.TabIndex = 5;
+            this.EmailtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailtextBox_KeyPress);
             // 
             // UsuarioIdlabel
             // 
             this.UsuarioIdlabel.AutoSize = true;
-            this.UsuarioIdlabel.Location = new System.Drawing.Point(28, 44);
+            this.UsuarioIdlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioIdlabel.Location = new System.Drawing.Point(20, 47);
             this.UsuarioIdlabel.Name = "UsuarioIdlabel";
-            this.UsuarioIdlabel.Size = new System.Drawing.Size(55, 13);
+            this.UsuarioIdlabel.Size = new System.Drawing.Size(74, 14);
             this.UsuarioIdlabel.TabIndex = 6;
-            this.UsuarioIdlabel.Text = "Usuario Id";
+            this.UsuarioIdlabel.Text = "Usuario ID:";
             // 
             // Nombreslabel
             // 
             this.Nombreslabel.AutoSize = true;
-            this.Nombreslabel.Location = new System.Drawing.Point(28, 91);
+            this.Nombreslabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombreslabel.Location = new System.Drawing.Point(28, 109);
             this.Nombreslabel.Name = "Nombreslabel";
-            this.Nombreslabel.Size = new System.Drawing.Size(49, 13);
+            this.Nombreslabel.Size = new System.Drawing.Size(64, 14);
             this.Nombreslabel.TabIndex = 7;
-            this.Nombreslabel.Text = "Nombres";
+            this.Nombreslabel.Text = "Nombres:";
             // 
             // Apellidoslabel
             // 
             this.Apellidoslabel.AutoSize = true;
-            this.Apellidoslabel.Location = new System.Drawing.Point(28, 139);
+            this.Apellidoslabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellidoslabel.Location = new System.Drawing.Point(28, 149);
             this.Apellidoslabel.Name = "Apellidoslabel";
-            this.Apellidoslabel.Size = new System.Drawing.Size(49, 13);
+            this.Apellidoslabel.Size = new System.Drawing.Size(66, 14);
             this.Apellidoslabel.TabIndex = 8;
-            this.Apellidoslabel.Text = "Apellidos";
+            this.Apellidoslabel.Text = "Apellidos:";
             // 
             // Telefonolabel
             // 
             this.Telefonolabel.AutoSize = true;
-            this.Telefonolabel.Location = new System.Drawing.Point(28, 175);
+            this.Telefonolabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefonolabel.Location = new System.Drawing.Point(30, 196);
             this.Telefonolabel.Name = "Telefonolabel";
-            this.Telefonolabel.Size = new System.Drawing.Size(49, 13);
+            this.Telefonolabel.Size = new System.Drawing.Size(64, 14);
             this.Telefonolabel.TabIndex = 9;
-            this.Telefonolabel.Text = "Telefono";
+            this.Telefonolabel.Text = "Telefono:";
             // 
             // Emaillabel
             // 
             this.Emaillabel.AutoSize = true;
-            this.Emaillabel.Location = new System.Drawing.Point(28, 222);
+            this.Emaillabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Emaillabel.Location = new System.Drawing.Point(50, 240);
             this.Emaillabel.Name = "Emaillabel";
-            this.Emaillabel.Size = new System.Drawing.Size(32, 13);
+            this.Emaillabel.Size = new System.Drawing.Size(42, 14);
             this.Emaillabel.TabIndex = 10;
-            this.Emaillabel.Text = "Email";
+            this.Emaillabel.Text = "Email:";
             // 
             // Direccionlabel
             // 
             this.Direccionlabel.AutoSize = true;
-            this.Direccionlabel.Location = new System.Drawing.Point(28, 263);
+            this.Direccionlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Direccionlabel.Location = new System.Drawing.Point(26, 288);
             this.Direccionlabel.Name = "Direccionlabel";
-            this.Direccionlabel.Size = new System.Drawing.Size(52, 13);
+            this.Direccionlabel.Size = new System.Drawing.Size(66, 14);
             this.Direccionlabel.TabIndex = 11;
-            this.Direccionlabel.Text = "Direccion";
+            this.Direccionlabel.Text = "Direccion:";
             // 
             // NombreUsuariolabel
             // 
             this.NombreUsuariolabel.AutoSize = true;
-            this.NombreUsuariolabel.Location = new System.Drawing.Point(331, 44);
+            this.NombreUsuariolabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreUsuariolabel.Location = new System.Drawing.Point(336, 44);
             this.NombreUsuariolabel.Name = "NombreUsuariolabel";
-            this.NombreUsuariolabel.Size = new System.Drawing.Size(83, 13);
+            this.NombreUsuariolabel.Size = new System.Drawing.Size(107, 14);
             this.NombreUsuariolabel.TabIndex = 12;
-            this.NombreUsuariolabel.Text = "Nombre Usuario";
+            this.NombreUsuariolabel.Text = "Nombre Usuario:";
             // 
             // ConfirmarContrasenialabel
             // 
             this.ConfirmarContrasenialabel.AutoSize = true;
-            this.ConfirmarContrasenialabel.Location = new System.Drawing.Point(331, 139);
+            this.ConfirmarContrasenialabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmarContrasenialabel.Location = new System.Drawing.Point(298, 137);
             this.ConfirmarContrasenialabel.Name = "ConfirmarContrasenialabel";
-            this.ConfirmarContrasenialabel.Size = new System.Drawing.Size(108, 13);
+            this.ConfirmarContrasenialabel.Size = new System.Drawing.Size(145, 14);
             this.ConfirmarContrasenialabel.TabIndex = 14;
-            this.ConfirmarContrasenialabel.Text = "Confirmar Contraseña";
+            this.ConfirmarContrasenialabel.Text = "Confirmar Contraseña:";
             // 
             // Contrasenialabel
             // 
             this.Contrasenialabel.AutoSize = true;
-            this.Contrasenialabel.Location = new System.Drawing.Point(331, 91);
+            this.Contrasenialabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Contrasenialabel.Location = new System.Drawing.Point(362, 89);
             this.Contrasenialabel.Name = "Contrasenialabel";
-            this.Contrasenialabel.Size = new System.Drawing.Size(61, 13);
+            this.Contrasenialabel.Size = new System.Drawing.Size(81, 14);
             this.Contrasenialabel.TabIndex = 15;
-            this.Contrasenialabel.Text = "Contraseña";
+            this.Contrasenialabel.Text = "Contraseña:";
             // 
             // ConfirmarContraseniatextBox
             // 
-            this.ConfirmarContraseniatextBox.Location = new System.Drawing.Point(445, 139);
+            this.ConfirmarContraseniatextBox.Location = new System.Drawing.Point(449, 137);
             this.ConfirmarContraseniatextBox.Name = "ConfirmarContraseniatextBox";
-            this.ConfirmarContraseniatextBox.Size = new System.Drawing.Size(165, 20);
+            this.ConfirmarContraseniatextBox.Size = new System.Drawing.Size(128, 20);
             this.ConfirmarContraseniatextBox.TabIndex = 16;
             this.ConfirmarContraseniatextBox.UseSystemPasswordChar = true;
+            this.ConfirmarContraseniatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConfirmarContraseniatextBox_KeyPress);
             // 
             // ContraseniatextBox
             // 
-            this.ContraseniatextBox.Location = new System.Drawing.Point(445, 88);
+            this.ContraseniatextBox.Location = new System.Drawing.Point(449, 86);
             this.ContraseniatextBox.Name = "ContraseniatextBox";
-            this.ContraseniatextBox.Size = new System.Drawing.Size(165, 20);
+            this.ContraseniatextBox.Size = new System.Drawing.Size(128, 20);
             this.ContraseniatextBox.TabIndex = 17;
             this.ContraseniatextBox.UseSystemPasswordChar = true;
+            this.ContraseniatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContraseniatextBox_KeyPress);
             // 
             // NombreUsuariotextBox
             // 
-            this.NombreUsuariotextBox.Location = new System.Drawing.Point(445, 41);
+            this.NombreUsuariotextBox.Location = new System.Drawing.Point(449, 39);
             this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
-            this.NombreUsuariotextBox.Size = new System.Drawing.Size(165, 20);
+            this.NombreUsuariotextBox.Size = new System.Drawing.Size(128, 20);
             this.NombreUsuariotextBox.TabIndex = 18;
+            this.NombreUsuariotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreUsuariotextBox_KeyPress);
             // 
             // EsActivocheckBox
             // 
             this.EsActivocheckBox.AutoSize = true;
-            this.EsActivocheckBox.Location = new System.Drawing.Point(334, 184);
+            this.EsActivocheckBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EsActivocheckBox.Location = new System.Drawing.Point(339, 187);
             this.EsActivocheckBox.Name = "EsActivocheckBox";
-            this.EsActivocheckBox.Size = new System.Drawing.Size(77, 17);
+            this.EsActivocheckBox.Size = new System.Drawing.Size(89, 18);
             this.EsActivocheckBox.TabIndex = 19;
             this.EsActivocheckBox.Text = "Es Activo?";
             this.EsActivocheckBox.UseVisualStyleBackColor = true;
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(232, 371);
+            this.Eliminarbutton.Location = new System.Drawing.Point(232, 382);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
             this.Eliminarbutton.TabIndex = 21;
@@ -232,7 +249,8 @@
             // 
             // Fotobutton
             // 
-            this.Fotobutton.Location = new System.Drawing.Point(535, 178);
+            this.Fotobutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fotobutton.Location = new System.Drawing.Point(502, 176);
             this.Fotobutton.Name = "Fotobutton";
             this.Fotobutton.Size = new System.Drawing.Size(75, 38);
             this.Fotobutton.TabIndex = 22;
@@ -242,7 +260,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(133, 371);
+            this.Guardarbutton.Location = new System.Drawing.Point(133, 382);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 23);
             this.Guardarbutton.TabIndex = 24;
@@ -253,7 +271,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(31, 371);
+            this.Nuevobutton.Location = new System.Drawing.Point(31, 381);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 23);
             this.Nuevobutton.TabIndex = 25;
@@ -274,14 +292,6 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // FotopictureBox
-            // 
-            this.FotopictureBox.Location = new System.Drawing.Point(334, 222);
-            this.FotopictureBox.Name = "FotopictureBox";
-            this.FotopictureBox.Size = new System.Drawing.Size(276, 172);
-            this.FotopictureBox.TabIndex = 20;
-            this.FotopictureBox.TabStop = false;
-            // 
             // UsuarioserrorProvider
             // 
             this.UsuarioserrorProvider.ContainerControl = this;
@@ -290,21 +300,23 @@
             // 
             this.FotoopenFileDialog.FileName = "FotoopenFileDialog";
             // 
-            // label1
+            // FotopictureBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 313);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Holaaaaa";
+            this.FotopictureBox.BackgroundImage = global::GCTickets.Properties.Resources.icon_user_default;
+            this.FotopictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FotopictureBox.Location = new System.Drawing.Point(339, 222);
+            this.FotopictureBox.Name = "FotopictureBox";
+            this.FotopictureBox.Size = new System.Drawing.Size(238, 183);
+            this.FotopictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FotopictureBox.TabIndex = 20;
+            this.FotopictureBox.TabStop = false;
             // 
             // UsuariosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 417);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
+            this.ClientSize = new System.Drawing.Size(603, 422);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Buscarbutton);
@@ -332,10 +344,11 @@
             this.Controls.Add(this.TelefonomaskedTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UsuariosForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Usuarios";
             this.Load += new System.EventHandler(this.UsuariosForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioserrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotopictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,6 +383,5 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.ErrorProvider UsuarioserrorProvider;
         private System.Windows.Forms.OpenFileDialog FotoopenFileDialog;
-        private System.Windows.Forms.Label label1;
     }
 }
