@@ -34,10 +34,35 @@ namespace GCTickets
             Limpiar();
         }
 
+        public bool ObtenerDatos()
+        {
+            bool Retorno = true;
+            Error.Clear();
+            if (NombreUsuariotextBox.Text.Length > 0)
+            {
+                Usuario.NombreUsuario = NombreUsuariotextBox.Text;
+            }
+            else
+            {
+                Error.SetError(NombreUsuariotextBox, "Debe ingresar un nombre de usuario");
+                Retorno = false;
+            }
+            if (ContraseniatextBox.Text.Length > 0)
+            {
+                Usuario.Contrasenia = ContraseniatextBox.Text;
+            }
+            else
+            {
+                Error.SetError(ContraseniatextBox, "Debe ingresar una contraseña");
+                Retorno = false;
+            }
+            return Retorno;
+        }
+
         private void Entrarbutton_Click(object sender, EventArgs e)
         {
-            if(NombreUsuariotextBox.Text != "" && ContraseniatextBox.Text != "")
-            {
+                if (ObtenerDatos())
+                {
                 if (Usuario.LoginUsuario())
                 {
                     if(NombreUsuariotextBox.Text == Usuario.NombreUsuario &&  ContraseniatextBox.Text == Usuario.Contrasenia)
@@ -51,11 +76,6 @@ namespace GCTickets
                         Error.SetError(ContraseniatextBox, "El usuario y la contraseña no coinciden por favor intente de nuevo");
                     }
                 }
-            }
-            else
-            {
-                Error.SetError(NombreUsuariotextBox, "Debe ingresar un nombre de usuario");
-                Error.SetError(ContraseniatextBox, "Debe ingresar una contraseña");
             }
         }
 

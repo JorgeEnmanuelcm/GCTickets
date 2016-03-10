@@ -12,7 +12,7 @@ using BLL;
 namespace GCTickets.Consultas
 {
     public partial class TipoEventoConsulta : Form
-    {
+    { 
         public TipoEventoConsulta()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace GCTickets.Consultas
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
+
             TipoEventoClass Consulta = new TipoEventoClass();
             string filtro = "1=1";
 
@@ -38,6 +39,7 @@ namespace GCTickets.Consultas
 
             TipoEventodataGridView.DataSource = Consulta.Listado("TipoEventoId, Descripcion", filtro, "");
             CanttextBox.Text = TipoEventodataGridView.RowCount.ToString();
+            } 
         }
     }
-}
+

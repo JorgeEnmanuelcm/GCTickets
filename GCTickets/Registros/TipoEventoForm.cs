@@ -15,6 +15,7 @@ namespace GCTickets.Registros
     {
         ErrorProvider Error = new ErrorProvider();
         TipoEventoClass TipoEvento = new TipoEventoClass();
+        DialogResult SiNo = new DialogResult();
 
         public TipoEventoForm()
         {
@@ -23,43 +24,27 @@ namespace GCTickets.Registros
 
         private void DescripciontextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
+            if ((e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 46) || (e.KeyChar == 44))
             {
                 e.Handled = false;
             }
             else
             {
                 e.Handled = true;
-                Error.SetError(DescripciontextBox, "Este campo no acepta numeros ni caracteres especiales");
+                Error.SetError(DescripciontextBox, "Este campo no acepta el tipo de caracter que acaba de digitar");
             }
         }
 
         private void IdTipoEventotextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127))
             {
                 e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
             }
             else
             {
                 e.Handled = true;
-                Error.SetError(IdTipoEventotextBox, "Este campo solo acepta numeros");
+                Error.SetError(IdTipoEventotextBox, "Este campo no acepta el tipo de caracter que acaba de digitar");
             }
         }
 
@@ -82,7 +67,6 @@ namespace GCTickets.Registros
                 Error.SetError(DescripciontextBox, "Debe ingresar una descripcion");
                 Retorno = false;
             }
-
             return Retorno;
         }
 
@@ -93,33 +77,40 @@ namespace GCTickets.Registros
 
         private void MensajeOk(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Miembros", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "Registro de Tipo Eventos", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void MensajeError(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Miembros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mensaje, "Registro de Tipo Eventos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void MensajeAdvertencia(string mensaje)
         {
-            MessageBox.Show(mensaje, "Registro de Miembros", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(mensaje, "Registro de Tipo Eventos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            if (TipoEvento.UnicaDescripcion(DescripciontextBox.Text))
+            {
+                MessageBox.Show("Esta Descripcion ya existe!!!", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DescripciontextBox.Clear();
+            }
+            else
+            {
             if (ObtenerDatos())
             {
                 if (IdTipoEventotextBox.Text.Length == 0)
                 {
                     if (TipoEvento.Insertar())
                     {
-                        MensajeOk("Se han insertado los datos correctamente");
+                        MensajeOk("Se han iguardado los datos correctamente");
                         Limpiar();
                     }
                     else
                     {
-                        MensajeError("No se han podido insertar datos");
+                        MensajeError("No se ha podido guardar los datos");
 
                     }
                 }
@@ -137,30 +128,36 @@ namespace GCTickets.Registros
                     }
                 }
             }
+            }
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             try
             {
-                ObtenerDatos();
-                if (TipoEvento.Buscar(TipoEvento.TipoEventoId))
+                SiNo = MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (SiNo == System.Windows.Forms.DialogResult.Yes)
                 {
-                    if (TipoEvento.Eliminar())
+                    ObtenerDatos();
+                    if (TipoEvento.Buscar(TipoEvento.TipoEventoId))
                     {
-                        MensajeOk("Se ha eliminado correctamente");
-                        Limpiar();
-                        Guardarbutton.Text = "Guardar";
+                        if (TipoEvento.Eliminar())
+                        {
+                            MensajeOk("Se ha eliminado correctamente");
+                            Limpiar();
+                            Guardarbutton.Text = "Guardar";
+                            Eliminarbutton.Enabled = false;
+                        }
+                        else
+                        {
+                            MensajeError("Error al eliminar");
+                        }
                     }
                     else
                     {
-                        MensajeError("Error al eliminar");
+                        MensajeAdvertencia("Este Id no existe");
+                        Limpiar();
                     }
-                }
-                else
-                {
-                    MensajeAdvertencia("Este Id no existe");
-                    Limpiar();
                 }
             }
             catch (Exception)
@@ -179,7 +176,7 @@ namespace GCTickets.Registros
             }
             else
             {
-            if (TipoEvento.Buscar(id))
+             if (TipoEvento.Buscar(id))
             {
                 Eliminarbutton.Enabled = true;
                 Guardarbutton.Text = "Modificar";

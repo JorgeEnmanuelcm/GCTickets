@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortadaPrincipal));
             this.PortadamenuStrip = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroTipoEvenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,10 +41,10 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoEventoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadatoolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.UsuariostoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.VentatoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.PortadamenuStrip.SuspendLayout();
             this.PortadatoolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,21 @@
             this.PortadamenuStrip.Size = new System.Drawing.Size(681, 24);
             this.PortadamenuStrip.TabIndex = 0;
             this.PortadamenuStrip.Text = "PortadamenuStrip";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.salirToolStripMenuItem.Text = "Cerrar Seccion";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // registrosToolStripMenuItem
             // 
@@ -117,52 +134,52 @@
             // tipoEventoToolStripMenuItem1
             // 
             this.tipoEventoToolStripMenuItem1.Name = "tipoEventoToolStripMenuItem1";
-            this.tipoEventoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.tipoEventoToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.tipoEventoToolStripMenuItem1.Text = "Tipo Evento";
             this.tipoEventoToolStripMenuItem1.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem1_Click);
             // 
             // PortadatoolStrip
             // 
+            this.PortadatoolStrip.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.PortadatoolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripSplitButton1});
+            this.UsuariostoolStripButton,
+            this.toolStripSeparator1,
+            this.VentatoolStripButton,
+            this.toolStripSeparator2});
             this.PortadatoolStrip.Location = new System.Drawing.Point(0, 24);
             this.PortadatoolStrip.Name = "PortadatoolStrip";
-            this.PortadatoolStrip.Size = new System.Drawing.Size(681, 25);
+            this.PortadatoolStrip.Size = new System.Drawing.Size(681, 37);
             this.PortadatoolStrip.TabIndex = 1;
             this.PortadatoolStrip.Text = "PortadatoolStrip";
             // 
-            // toolStripButton1
+            // toolStripSeparator1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
             // 
-            // toolStripSplitButton1
+            // toolStripSeparator2
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 22);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
-            // archivoToolStripMenuItem
+            // UsuariostoolStripButton
             // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem});
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
+            this.UsuariostoolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UsuariostoolStripButton.Image = global::GCTickets.Properties.Resources._1456777108_userconfig;
+            this.UsuariostoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UsuariostoolStripButton.Name = "UsuariostoolStripButton";
+            this.UsuariostoolStripButton.Size = new System.Drawing.Size(34, 34);
+            this.UsuariostoolStripButton.Text = "Registro de  usuarios";
+            this.UsuariostoolStripButton.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // salirToolStripMenuItem
+            // VentatoolStripButton
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.VentatoolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.VentatoolStripButton.Image = global::GCTickets.Properties.Resources._1455739878_create_ticket;
+            this.VentatoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.VentatoolStripButton.Name = "VentatoolStripButton";
+            this.VentatoolStripButton.Size = new System.Drawing.Size(34, 34);
+            this.VentatoolStripButton.Text = "Registro de Ventas";
             // 
             // PortadaPrincipal
             // 
@@ -178,7 +195,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Portada Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PortadaPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.PortadaPrincipal_Load);
             this.PortadamenuStrip.ResumeLayout(false);
             this.PortadamenuStrip.PerformLayout();
@@ -196,14 +212,16 @@
         private System.Windows.Forms.ToolStripMenuItem registroUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroTipoEvenoToolStripMenuItem;
         private System.Windows.Forms.ToolStrip PortadatoolStrip;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton UsuariostoolStripButton;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoEventoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton VentatoolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }

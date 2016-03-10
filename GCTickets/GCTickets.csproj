@@ -191,6 +191,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\1455739878_create-ticket.png" />
     <None Include="Resources\icon-user-default.png" />
     <None Include="Resources\1456777108_userconfig.png" />
   </ItemGroup>

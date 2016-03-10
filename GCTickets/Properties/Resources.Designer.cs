@@ -73,6 +73,16 @@ namespace GCTickets.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1455739878_create_ticket {
+            get {
+                object obj = ResourceManager.GetObject("1455739878_create-ticket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1456777108_userconfig {
             get {
                 object obj = ResourceManager.GetObject("1456777108_userconfig", resourceCulture);
