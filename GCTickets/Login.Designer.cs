@@ -57,23 +57,25 @@
             this.Contrasenialabel.Location = new System.Drawing.Point(53, 143);
             this.Contrasenialabel.Name = "Contrasenialabel";
             this.Contrasenialabel.Size = new System.Drawing.Size(81, 14);
-            this.Contrasenialabel.TabIndex = 1;
+            this.Contrasenialabel.TabIndex = 0;
             this.Contrasenialabel.Text = "Contraseña:";
             // 
             // NombreUsuariotextBox
             // 
             this.NombreUsuariotextBox.Location = new System.Drawing.Point(140, 73);
+            this.NombreUsuariotextBox.MaxLength = 31;
             this.NombreUsuariotextBox.Name = "NombreUsuariotextBox";
             this.NombreUsuariotextBox.Size = new System.Drawing.Size(159, 20);
-            this.NombreUsuariotextBox.TabIndex = 2;
+            this.NombreUsuariotextBox.TabIndex = 1;
             this.NombreUsuariotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreUsuariotextBox_KeyPress);
             // 
             // ContraseniatextBox
             // 
             this.ContraseniatextBox.Location = new System.Drawing.Point(140, 143);
+            this.ContraseniatextBox.MaxLength = 29;
             this.ContraseniatextBox.Name = "ContraseniatextBox";
             this.ContraseniatextBox.Size = new System.Drawing.Size(159, 20);
-            this.ContraseniatextBox.TabIndex = 3;
+            this.ContraseniatextBox.TabIndex = 2;
             this.ContraseniatextBox.UseSystemPasswordChar = true;
             this.ContraseniatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContraseniatextBox_KeyPress);
             // 
@@ -82,7 +84,7 @@
             this.Nuevobutton.Location = new System.Drawing.Point(63, 214);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 23);
-            this.Nuevobutton.TabIndex = 4;
+            this.Nuevobutton.TabIndex = 0;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
@@ -92,7 +94,7 @@
             this.Entrarbutton.Location = new System.Drawing.Point(192, 214);
             this.Entrarbutton.Name = "Entrarbutton";
             this.Entrarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Entrarbutton.TabIndex = 5;
+            this.Entrarbutton.TabIndex = 3;
             this.Entrarbutton.Text = "Entrar";
             this.Entrarbutton.UseVisualStyleBackColor = true;
             this.Entrarbutton.Click += new System.EventHandler(this.Entrarbutton_Click);

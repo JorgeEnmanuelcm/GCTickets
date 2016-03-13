@@ -81,7 +81,7 @@ namespace GCTickets
 
         private void Login_Load(object sender, System.EventArgs e)
         {
-            
+
         }
 
         private void Login_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
@@ -91,7 +91,7 @@ namespace GCTickets
 
         private void NombreUsuariotextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 13))
             {
                 e.Handled = false;
             }
@@ -100,11 +100,15 @@ namespace GCTickets
                 e.Handled = true;
                 Error.SetError(NombreUsuariotextBox, "Este campo no acepta el tipo de caracter que acaba de digitar");
             }
+            if (e.KeyChar == 13)
+            {
+                ContraseniatextBox.Focus();
+            }
         }
 
         private void ContraseniatextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 13))
             {
                 e.Handled = false;
             }
@@ -112,6 +116,10 @@ namespace GCTickets
             {
                 e.Handled = true;
                 Error.SetError(ContraseniatextBox, "Este campo no acepta el tipo de caracter que acaba de digitar");
+            }
+            if (e.KeyChar == 13)
+            {
+                Entrarbutton.Focus();
             }
         }
     }

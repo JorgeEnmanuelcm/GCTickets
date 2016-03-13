@@ -24,7 +24,7 @@ namespace GCTickets.Registros
 
         private void DescripciontextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 46) || (e.KeyChar == 44))
+            if ((e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 46) || (e.KeyChar == 44) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
             }
@@ -33,11 +33,15 @@ namespace GCTickets.Registros
                 e.Handled = true;
                 Error.SetError(DescripciontextBox, "Este campo no acepta el tipo de caracter que acaba de digitar");
             }
+            if (e.KeyChar == 13)
+            {
+                Guardarbutton.Focus();
+            }
         }
 
         private void IdTipoEventotextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
             }
@@ -45,6 +49,10 @@ namespace GCTickets.Registros
             {
                 e.Handled = true;
                 Error.SetError(IdTipoEventotextBox, "Este campo no acepta el tipo de caracter que acaba de digitar");
+            }
+            if (e.KeyChar == 13)
+            {
+                Buscarbutton.Focus();
             }
         }
 
@@ -119,6 +127,8 @@ namespace GCTickets.Registros
                     if (TipoEvento.Editar())
                     {
                         MensajeOk("Se han modificado los datos correctamente");
+                        Eliminarbutton.Enabled = false;
+                        Guardarbutton.Text = "Guardar";
                         Limpiar();
                     }
                     else
