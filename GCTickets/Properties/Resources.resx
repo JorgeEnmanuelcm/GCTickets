@@ -118,16 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="1456777108_userconfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1456777108_userconfig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1455583405_userconfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1455583405_userconfig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-user-default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-user-default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1458000227_EditDocument" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458000227_EditDocument.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458000247_Magnifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458000247_Magnifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006602_Magnifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006602_Magnifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006586_Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006586_Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1455739878_create-ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1455739878_create-ticket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458000641_Camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458000641_Camera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1456777108_userconfig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1456777108_userconfig.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006651_Camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006651_Camera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458000298_Enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458000298_Enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006616_Enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006616_Enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006437_Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006437_Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006564_EditDocument" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006564_EditDocument.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1458006725_Diskette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458006725_Diskette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ticket.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

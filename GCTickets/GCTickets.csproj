@@ -201,6 +201,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\ticket.jpg" />
+    <None Include="Resources\1458006616_Enter.png" />
+    <None Include="Resources\1458006586_Add.png" />
+    <None Include="Resources\1458006437_Cancel.png" />
+    <None Include="Resources\1458006725_Diskette.png" />
+    <None Include="Resources\1458006564_EditDocument.png" />
+    <None Include="Resources\1458006651_Camera.png" />
+    <None Include="Resources\1458006602_Magnifier.png" />
     <None Include="Resources\1455739878_create-ticket.png" />
     <None Include="Resources\icon-user-default.png" />
     <None Include="Resources\1456777108_userconfig.png" />

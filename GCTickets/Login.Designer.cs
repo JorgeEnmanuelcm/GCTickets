@@ -34,9 +34,9 @@
             this.Contrasenialabel = new System.Windows.Forms.Label();
             this.NombreUsuariotextBox = new System.Windows.Forms.TextBox();
             this.ContraseniatextBox = new System.Windows.Forms.TextBox();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Entrarbutton = new System.Windows.Forms.Button();
             this.LoginerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Entrarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LoginerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,29 +79,39 @@
             this.ContraseniatextBox.UseSystemPasswordChar = true;
             this.ContraseniatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContraseniatextBox_KeyPress);
             // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Location = new System.Drawing.Point(63, 214);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 23);
-            this.Nuevobutton.TabIndex = 0;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
-            // 
-            // Entrarbutton
-            // 
-            this.Entrarbutton.Location = new System.Drawing.Point(192, 214);
-            this.Entrarbutton.Name = "Entrarbutton";
-            this.Entrarbutton.Size = new System.Drawing.Size(75, 23);
-            this.Entrarbutton.TabIndex = 3;
-            this.Entrarbutton.Text = "Entrar";
-            this.Entrarbutton.UseVisualStyleBackColor = true;
-            this.Entrarbutton.Click += new System.EventHandler(this.Entrarbutton_Click);
-            // 
             // LoginerrorProvider
             // 
             this.LoginerrorProvider.ContainerControl = this;
+            // 
+            // Entrarbutton
+            // 
+            this.Entrarbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Entrarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Entrarbutton.Image = global::GCTickets.Properties.Resources._1458006616_Enter;
+            this.Entrarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Entrarbutton.Location = new System.Drawing.Point(192, 193);
+            this.Entrarbutton.Name = "Entrarbutton";
+            this.Entrarbutton.Size = new System.Drawing.Size(76, 42);
+            this.Entrarbutton.TabIndex = 3;
+            this.Entrarbutton.Text = "Entrar";
+            this.Entrarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Entrarbutton.UseVisualStyleBackColor = true;
+            this.Entrarbutton.Click += new System.EventHandler(this.Entrarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Nuevobutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nuevobutton.Image = global::GCTickets.Properties.Resources._1458006586_Add;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(87, 193);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 42);
+            this.Nuevobutton.TabIndex = 0;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Login
             // 
@@ -116,6 +126,8 @@
             this.Controls.Add(this.Contrasenialabel);
             this.Controls.Add(this.NombreUsuariolabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -56,11 +56,15 @@
             // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Buscarbutton.Location = new System.Drawing.Point(421, 27);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 41);
             this.Buscarbutton.TabIndex = 1;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -123,6 +127,8 @@
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.TipoEventodataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TipoEventoConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Tipo Evento ";
