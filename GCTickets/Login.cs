@@ -70,11 +70,11 @@ namespace GCTickets
                         Portada.Show();
                         this.Visible = false;
                     }
-                    else
-                    {
-                        Error.SetError(NombreUsuariotextBox, "El usuario y la contraseña no coinciden por favor intente de nuevo");
-                        Error.SetError(ContraseniatextBox, "El usuario y la contraseña no coinciden por favor intente de nuevo");
-                    }
+                }
+                else
+                {
+                    Error.SetError(NombreUsuariotextBox, "El usuario y la contraseña no coinciden por favor intente de nuevo");
+                    Error.SetError(ContraseniatextBox, "El usuario y la contraseña no coinciden por favor intente de nuevo");
                 }
             }
         }

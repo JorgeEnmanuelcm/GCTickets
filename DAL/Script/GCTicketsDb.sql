@@ -21,4 +21,19 @@
 --Descripcion varchar(30)
 --)
 
+--create table Eventos(
+--EventoId int primary key identity(1,1),
+--TipoEventoId int references TipoEvento(TipoEventoId),
+--NombreEvento varchar(26),
+--FechaEvento varchar(12),
+--LugarEvento varchar(26)
+--)
+
+--create table EventosDetalle(
+--Id int primary key identity(1,1),
+--EventoId int foreign key references Eventos(EventoId),
+--Descripcion varchar(12),
+--CantDisponible int,
+--PrecioTicket int
+--)
 

@@ -111,6 +111,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\EventosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\EventosForm.Designer.cs">
+      <DependentUpon>EventosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\TipoEventoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,8 +155,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\EventosForm.resx">
+      <DependentUpon>EventosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\TipoEventoForm.resx">
       <DependentUpon>TipoEventoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\UsuariosForm.es-DO.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\UsuariosForm.resx">
       <DependentUpon>UsuariosForm.cs</DependentUpon>

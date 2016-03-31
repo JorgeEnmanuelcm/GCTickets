@@ -36,6 +36,7 @@
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroTipoEvenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +48,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.VentatoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.Usuariolabel = new System.Windows.Forms.Label();
             this.PortadamenuStrip.SuspendLayout();
             this.PortadatoolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -92,7 +94,8 @@
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroUsuariosToolStripMenuItem,
-            this.registroTipoEvenoToolStripMenuItem});
+            this.registroTipoEvenoToolStripMenuItem,
+            this.registroEventosToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "Registros";
@@ -110,6 +113,13 @@
             this.registroTipoEvenoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.registroTipoEvenoToolStripMenuItem.Text = "Registro Tipo Evento";
             this.registroTipoEvenoToolStripMenuItem.Click += new System.EventHandler(this.registroTipoEvenoToolStripMenuItem_Click);
+            // 
+            // registroEventosToolStripMenuItem
+            // 
+            this.registroEventosToolStripMenuItem.Name = "registroEventosToolStripMenuItem";
+            this.registroEventosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.registroEventosToolStripMenuItem.Text = "Registro Eventos";
+            this.registroEventosToolStripMenuItem.Click += new System.EventHandler(this.registroEventosToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -199,6 +209,15 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
+            // Usuariolabel
+            // 
+            this.Usuariolabel.AutoSize = true;
+            this.Usuariolabel.Location = new System.Drawing.Point(537, 121);
+            this.Usuariolabel.Name = "Usuariolabel";
+            this.Usuariolabel.Size = new System.Drawing.Size(41, 13);
+            this.Usuariolabel.TabIndex = 2;
+            this.Usuariolabel.Text = "usuario";
+            // 
             // PortadaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,6 +226,7 @@
             this.BackgroundImage = global::GCTickets.Properties.Resources.ticket;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(681, 368);
+            this.Controls.Add(this.Usuariolabel);
             this.Controls.Add(this.PortadatoolStrip);
             this.Controls.Add(this.PortadamenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -245,5 +265,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem registroEventosToolStripMenuItem;
+        private System.Windows.Forms.Label Usuariolabel;
     }
 }

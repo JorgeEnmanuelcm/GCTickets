@@ -44,6 +44,9 @@
             this.UsuariosdataGridView.AllowUserToAddRows = false;
             this.UsuariosdataGridView.AllowUserToDeleteRows = false;
             this.UsuariosdataGridView.AllowUserToOrderColumns = true;
+            this.UsuariosdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UsuariosdataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.UsuariosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UsuariosdataGridView.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -56,6 +59,9 @@
             // 
             // BuscarcomboBox
             // 
+            this.BuscarcomboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscarcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BuscarcomboBox.FormattingEnabled = true;
             this.BuscarcomboBox.Location = new System.Drawing.Point(68, 28);
@@ -65,6 +71,9 @@
             // 
             // BuscartextBox
             // 
+            this.BuscartextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscartextBox.Location = new System.Drawing.Point(195, 29);
             this.BuscartextBox.Name = "BuscartextBox";
             this.BuscartextBox.Size = new System.Drawing.Size(328, 20);
@@ -73,6 +82,9 @@
             // 
             // Buscarlabel
             // 
+            this.Buscarlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Buscarlabel.AutoSize = true;
             this.Buscarlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscarlabel.Location = new System.Drawing.Point(15, 31);
@@ -84,6 +96,9 @@
             // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -98,6 +113,9 @@
             // 
             // Cantlabel
             // 
+            this.Cantlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Cantlabel.AutoSize = true;
             this.Cantlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cantlabel.Location = new System.Drawing.Point(12, 316);
@@ -108,6 +126,9 @@
             // 
             // CanttextBox
             // 
+            this.CanttextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CanttextBox.Location = new System.Drawing.Point(195, 314);
             this.CanttextBox.Name = "CanttextBox";
             this.CanttextBox.ReadOnly = true;
@@ -118,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
             this.ClientSize = new System.Drawing.Size(616, 346);
             this.Controls.Add(this.CanttextBox);
@@ -129,7 +151,6 @@
             this.Controls.Add(this.UsuariosdataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "UsuariosConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Usuarios";

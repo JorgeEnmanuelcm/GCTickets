@@ -80,6 +80,9 @@
             // 
             this.BuscarcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BuscarcomboBox.FormattingEnabled = true;
+            this.BuscarcomboBox.Items.AddRange(new object[] {
+            "TipoEventoId",
+            "Descripcion"});
             this.BuscarcomboBox.Location = new System.Drawing.Point(67, 26);
             this.BuscarcomboBox.Name = "BuscarcomboBox";
             this.BuscarcomboBox.Size = new System.Drawing.Size(121, 21);
@@ -117,6 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
             this.ClientSize = new System.Drawing.Size(509, 272);
             this.Controls.Add(this.Cantlabel);
@@ -128,10 +132,10 @@
             this.Controls.Add(this.TipoEventodataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "TipoEventoConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Tipo Evento ";
+            this.Load += new System.EventHandler(this.TipoEventoConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventodataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

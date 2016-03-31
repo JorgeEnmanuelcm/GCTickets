@@ -37,7 +37,9 @@
             this.LoginerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Entrarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
+            this.LoginpictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LoginerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // NombreUsuariolabel
@@ -113,12 +115,23 @@
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
+            // LoginpictureBox
+            // 
+            this.LoginpictureBox.Image = global::GCTickets.Properties.Resources._1455583405_userconfig;
+            this.LoginpictureBox.Location = new System.Drawing.Point(140, 12);
+            this.LoginpictureBox.Name = "LoginpictureBox";
+            this.LoginpictureBox.Size = new System.Drawing.Size(56, 50);
+            this.LoginpictureBox.TabIndex = 4;
+            this.LoginpictureBox.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
             this.ClientSize = new System.Drawing.Size(334, 261);
+            this.Controls.Add(this.LoginpictureBox);
             this.Controls.Add(this.Entrarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.ContraseniatextBox);
@@ -127,13 +140,13 @@
             this.Controls.Add(this.NombreUsuariolabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LoginerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +161,6 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Entrarbutton;
         private System.Windows.Forms.ErrorProvider LoginerrorProvider;
+        private System.Windows.Forms.PictureBox LoginpictureBox;
     }
 }

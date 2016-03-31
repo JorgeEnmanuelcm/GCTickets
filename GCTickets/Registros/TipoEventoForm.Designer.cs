@@ -160,6 +160,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
             this.ClientSize = new System.Drawing.Size(291, 256);
             this.Controls.Add(this.Titulolabel);
@@ -173,10 +175,9 @@
             this.Controls.Add(this.IdTipoEventolabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "TipoEventoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tipo Evento";
+            this.Text = "GC Tickets";
             this.Load += new System.EventHandler(this.TipoEventoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventoerrorProvider)).EndInit();
             this.ResumeLayout(false);
