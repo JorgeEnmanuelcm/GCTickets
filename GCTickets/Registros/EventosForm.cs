@@ -39,7 +39,7 @@ namespace GCTickets.Registros
             LugarEventotextBox.Clear();
             EventodateTimePicker.ResetText();
             EventodataGridView.Rows.Clear();
-            TipoEventocomboBox.SelectedIndex = -1;
+            //TipoEventocomboBox.SelectedIndex = -1;
             DescripciontextBox.Clear();
             CantDisptextBox.Clear();
             PrecioTtextBox.Clear();
@@ -106,7 +106,6 @@ namespace GCTickets.Registros
                 foreach (DataGridViewRow item in EventodataGridView.Rows)
                 {
                     Evento.AgregarTickets(item.Cells["Descripcion"].Value.ToString(), (int)item.Cells["CantDisponible"].Value, (int)item.Cells["PrecioTicket"].Value);
-                    //EventodataGridView.Rows.Add(item.Descripcion, item.CantDisponible, item.PrecioTicket);
                 }
             }
             else
@@ -133,7 +132,6 @@ namespace GCTickets.Registros
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-            EventosClass Evento = new EventosClass();
             int cant = 0;
             int pre = 0;
             int.TryParse(CantDisptextBox.Text, out cant);
@@ -142,7 +140,6 @@ namespace GCTickets.Registros
             if (!DescripciontextBox.Text.Equals("") && !CantDisptextBox.Text.Equals("") && !PrecioTtextBox.Text.Equals(""))
             {
                 EventodataGridView.Rows.Add(DescripciontextBox.Text, cant, pre);
-               // Evento.AgregarTickets(DescripciontextBox.Text, cant, pre);
                 DescripciontextBox.Clear();
                 CantDisptextBox.Clear();
                 PrecioTtextBox.Clear();

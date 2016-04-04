@@ -203,6 +203,16 @@ namespace GCTickets.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1459716739_News {
+            get {
+                object obj = ResourceManager.GetObject("1459716739_News", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_user_default {
             get {
                 object obj = ResourceManager.GetObject("icon-user-default", resourceCulture);

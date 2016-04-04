@@ -46,7 +46,6 @@
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoEventoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eventosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PortadatoolStrip = new System.Windows.Forms.ToolStrip();
             this.UsuariostoolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -157,36 +156,35 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // tipoEventoToolStripMenuItem
             // 
             this.tipoEventoToolStripMenuItem.Name = "tipoEventoToolStripMenuItem";
-            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoEventoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.tipoEventoToolStripMenuItem.Text = "Tipo Evento";
             this.tipoEventoToolStripMenuItem.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem_Click);
             // 
             // eventosToolStripMenuItem
             // 
             this.eventosToolStripMenuItem.Name = "eventosToolStripMenuItem";
-            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.eventosToolStripMenuItem.Text = "Eventos";
             this.eventosToolStripMenuItem.Click += new System.EventHandler(this.eventosToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoEventoToolStripMenuItem1,
-            this.eventosToolStripMenuItem1});
+            this.tipoEventoToolStripMenuItem1});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -194,15 +192,9 @@
             // tipoEventoToolStripMenuItem1
             // 
             this.tipoEventoToolStripMenuItem1.Name = "tipoEventoToolStripMenuItem1";
-            this.tipoEventoToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.tipoEventoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.tipoEventoToolStripMenuItem1.Text = "Tipo Evento";
             this.tipoEventoToolStripMenuItem1.Click += new System.EventHandler(this.tipoEventoToolStripMenuItem1_Click);
-            // 
-            // eventosToolStripMenuItem1
-            // 
-            this.eventosToolStripMenuItem1.Name = "eventosToolStripMenuItem1";
-            this.eventosToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.eventosToolStripMenuItem1.Text = "Eventos";
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -258,9 +250,9 @@
             // Usuariolabel
             // 
             this.Usuariolabel.AutoSize = true;
-            this.Usuariolabel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Usuariolabel.BackColor = System.Drawing.Color.CadetBlue;
             this.Usuariolabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuariolabel.ForeColor = System.Drawing.Color.Black;
+            this.Usuariolabel.ForeColor = System.Drawing.SystemColors.Info;
             this.Usuariolabel.Location = new System.Drawing.Point(245, 37);
             this.Usuariolabel.Name = "Usuariolabel";
             this.Usuariolabel.Size = new System.Drawing.Size(19, 14);
@@ -271,8 +263,9 @@
             // Seccioniniciadalabel
             // 
             this.Seccioniniciadalabel.AutoSize = true;
-            this.Seccioniniciadalabel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Seccioniniciadalabel.BackColor = System.Drawing.Color.CadetBlue;
             this.Seccioniniciadalabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Seccioniniciadalabel.ForeColor = System.Drawing.SystemColors.Info;
             this.Seccioniniciadalabel.Location = new System.Drawing.Point(92, 37);
             this.Seccioniniciadalabel.Name = "Seccioniniciadalabel";
             this.Seccioniniciadalabel.Size = new System.Drawing.Size(147, 14);
@@ -331,7 +324,6 @@
         private System.Windows.Forms.ToolStripMenuItem registroVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eventosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eventosToolStripMenuItem1;
         public System.Windows.Forms.Label Usuariolabel;
         public System.Windows.Forms.Label Seccioniniciadalabel;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;

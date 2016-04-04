@@ -64,7 +64,6 @@
             // EventodataGridView
             // 
             this.EventodataGridView.AllowUserToAddRows = false;
-            this.EventodataGridView.AllowUserToDeleteRows = false;
             this.EventodataGridView.AllowUserToOrderColumns = true;
             this.EventodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EventodataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

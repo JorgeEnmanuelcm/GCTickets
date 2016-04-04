@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoEventoConsulta));
             this.TipoEventodataGridView = new System.Windows.Forms.DataGridView();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.BuscartextBox = new System.Windows.Forms.TextBox();
             this.BuscarcomboBox = new System.Windows.Forms.ComboBox();
             this.Buscarlabel = new System.Windows.Forms.Label();
             this.CanttextBox = new System.Windows.Forms.TextBox();
             this.Cantlabel = new System.Windows.Forms.Label();
             this.Titulolabel = new System.Windows.Forms.Label();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TipoEventodataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,20 +55,6 @@
             this.TipoEventodataGridView.RowHeadersVisible = false;
             this.TipoEventodataGridView.Size = new System.Drawing.Size(484, 157);
             this.TipoEventodataGridView.TabIndex = 0;
-            // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
-            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Buscarbutton.Location = new System.Drawing.Point(421, 66);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 41);
-            this.Buscarbutton.TabIndex = 2;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // BuscartextBox
             // 
@@ -103,17 +90,17 @@
             // 
             // CanttextBox
             // 
-            this.CanttextBox.Location = new System.Drawing.Point(208, 285);
+            this.CanttextBox.Location = new System.Drawing.Point(203, 299);
             this.CanttextBox.Name = "CanttextBox";
             this.CanttextBox.ReadOnly = true;
-            this.CanttextBox.Size = new System.Drawing.Size(207, 20);
+            this.CanttextBox.Size = new System.Drawing.Size(212, 20);
             this.CanttextBox.TabIndex = 0;
             // 
             // Cantlabel
             // 
             this.Cantlabel.AutoSize = true;
             this.Cantlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantlabel.Location = new System.Drawing.Point(9, 285);
+            this.Cantlabel.Location = new System.Drawing.Point(9, 299);
             this.Cantlabel.Name = "Cantlabel";
             this.Cantlabel.Size = new System.Drawing.Size(188, 14);
             this.Cantlabel.TabIndex = 0;
@@ -131,13 +118,44 @@
             this.Titulolabel.TabIndex = 23;
             this.Titulolabel.Text = "Consulta de Tipos Eventos";
             // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Buscarbutton.Location = new System.Drawing.Point(421, 66);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 41);
+            this.Buscarbutton.TabIndex = 2;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Imprimirbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Imprimirbutton.Image = global::GCTickets.Properties.Resources._1459716739_News;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Imprimirbutton.Location = new System.Drawing.Point(421, 276);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 46);
+            this.Imprimirbutton.TabIndex = 27;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
             // TipoEventoConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(509, 317);
+            this.ClientSize = new System.Drawing.Size(509, 331);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.Titulolabel);
             this.Controls.Add(this.Cantlabel);
             this.Controls.Add(this.CanttextBox);
@@ -168,5 +186,6 @@
         private System.Windows.Forms.TextBox CanttextBox;
         private System.Windows.Forms.Label Cantlabel;
         private System.Windows.Forms.Label Titulolabel;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

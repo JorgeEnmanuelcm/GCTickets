@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventosConsultaForm));
             this.Buscarlabel = new System.Windows.Forms.Label();
             this.BuscarcomboBox = new System.Windows.Forms.ComboBox();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.BuscartextBox = new System.Windows.Forms.TextBox();
             this.CanttextBox = new System.Windows.Forms.TextBox();
             this.Cantlabel = new System.Windows.Forms.Label();
@@ -41,6 +40,8 @@
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EventosdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,23 +73,6 @@
             this.BuscarcomboBox.Size = new System.Drawing.Size(145, 21);
             this.BuscarcomboBox.TabIndex = 0;
             this.BuscarcomboBox.TextChanged += new System.EventHandler(this.BuscarcomboBox_TextChanged);
-            // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
-            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Buscarbutton.Location = new System.Drawing.Point(547, 75);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 48);
-            this.Buscarbutton.TabIndex = 2;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // BuscartextBox
             // 
@@ -159,6 +143,7 @@
             // 
             // DesdedateTimePicker
             // 
+            this.DesdedateTimePicker.Enabled = false;
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.Location = new System.Drawing.Point(137, 77);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
@@ -167,6 +152,7 @@
             // 
             // HastadateTimePicker
             // 
+            this.HastadateTimePicker.Enabled = false;
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastadateTimePicker.Location = new System.Drawing.Point(336, 77);
             this.HastadateTimePicker.MaxDate = new System.DateTime(2020, 12, 11, 0, 0, 0, 0);
@@ -201,13 +187,47 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Desde:";
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Imprimirbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Imprimirbutton.Image = global::GCTickets.Properties.Resources._1459716739_News;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Imprimirbutton.Location = new System.Drawing.Point(547, 358);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 45);
+            this.Imprimirbutton.TabIndex = 27;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Buscarbutton.Location = new System.Drawing.Point(547, 77);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 45);
+            this.Buscarbutton.TabIndex = 2;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
             // EventosConsultaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(634, 400);
+            this.ClientSize = new System.Drawing.Size(634, 407);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HastadateTimePicker);
@@ -246,5 +266,6 @@
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

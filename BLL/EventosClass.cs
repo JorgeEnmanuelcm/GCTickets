@@ -34,13 +34,14 @@ namespace BLL
             this.Detalle = new List<EventosDetalleClass>();
         }
 
-        public EventosClass(int eventoid, int tipoeventoid, string nombreevento, string fechaevento, string lugarevento)
+        public EventosClass(int eventoid)
         {
             this.EventoId = eventoid;
-            this.TipoEventoId = tipoeventoid;
-            this.NombreEvento = nombreevento;
-            this.FechaEvento = fechaevento;
-            this.LugarEvento = lugarevento;
+            //this.TipoEventoId = tipoeventoid;
+            //this.NombreEvento = nombreevento;
+            //this.FechaEvento = fechaevento;
+            //this.LugarEvento = lugarevento;
+            //, int tipoeventoid, string nombreevento, string fechaevento, string lugarevento
 
         }
 

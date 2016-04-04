@@ -110,6 +110,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GCTicketsDbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GCTicketsDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCTicketsDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GCTicketsDbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCTicketsDbDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +163,12 @@
     <Compile Include="Registros\VentasForm.Designer.cs">
       <DependentUpon>VentasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteGCTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteGCTickets.Designer.cs">
+      <DependentUpon>ReporteGCTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoEventoReporteVisor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +193,7 @@
     <EmbeddedResource Include="GCTicketsAboutBox.resx">
       <DependentUpon>GCTicketsAboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GCTicketsReport.rdlc" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,10 +220,14 @@
     <EmbeddedResource Include="Registros\VentasForm.resx">
       <DependentUpon>VentasForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteGCTickets.resx">
+      <DependentUpon>ReporteGCTickets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\TipoEventoReport.rdlc" />
     <EmbeddedResource Include="TipoEventoReporteVisor.resx">
       <DependentUpon>TipoEventoReporteVisor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentasReport.rdlc" />
     <None Include="GCTicketsDbDataSet.xsc">
       <DependentUpon>GCTicketsDbDataSet.xsd</DependentUpon>
     </None>
@@ -217,6 +238,28 @@
     </None>
     <None Include="GCTicketsDbDataSet.xss">
       <DependentUpon>GCTicketsDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GCTicketsDbDataSet1.xsc">
+      <DependentUpon>GCTicketsDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GCTicketsDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GCTicketsDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GCTicketsDbDataSet1.xss">
+      <DependentUpon>GCTicketsDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GCTicketsDbDataSet2.xsc">
+      <DependentUpon>GCTicketsDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GCTicketsDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GCTicketsDbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GCTicketsDbDataSet2.xss">
+      <DependentUpon>GCTicketsDbDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,6 +292,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\1459716739_News.png" />
     <None Include="Resources\ticket.jpg" />
     <None Include="Resources\1458006616_Enter.png" />
     <None Include="Resources\1458006586_Add.png" />

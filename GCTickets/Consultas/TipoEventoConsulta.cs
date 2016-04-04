@@ -67,6 +67,12 @@ namespace GCTickets.Consultas
         {
             BuscartextBox.ReadOnly = true;
         }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            TipoEventoReporteVisor visor = new TipoEventoReporteVisor();
+            visor.Show();
+        }
     }
     }
 

@@ -56,7 +56,7 @@ namespace GCTickets.Consultas
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             Error.Clear();
-            //VentasClass Consulta = new VentasClass();
+            VentasClass Consulta = new VentasClass();
             string filtro = "1=1";
             if (BuscartextBox.Text.Length > 0)
             {
@@ -64,11 +64,26 @@ namespace GCTickets.Consultas
                 {
                     filtro = "VentaId like '%" + BuscartextBox.Text + "%'";
                 }
-                
+                else if (BuscarcomboBox.SelectedIndex == 1)
+                {
+                    filtro = "UsuarioId like '%" + BuscartextBox.Text + "%'";
+                }
+
             }
-           // VentasdataGridView.DataSource = Consulta.Listado("VentaId", filtro, "");
+            VentasdataGridView.DataSource = Consulta.Listado("VentaId, UsuarioId, Fecha, Ticket, Cantidad, Descripcion, Total", filtro, "");
             CanttextBox.Text = VentasdataGridView.RowCount.ToString();
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            ReporteGCTickets reporte = new ReporteGCTickets();
+            DataTable dt = new DataTable();
+            dt = (DataTable)VentasdataGridView.DataSource;
+            dt.TableName = "VentasDataSet";
+            reporte.Reporte = "VentasReport.rdlc";
+            reporte.Data = dt;
+            reporte.ShowDialog();
         }
     }
     }
-}
+

@@ -35,8 +35,8 @@
             this.Buscarlabel = new System.Windows.Forms.Label();
             this.Cantlabel = new System.Windows.Forms.Label();
             this.CanttextBox = new System.Windows.Forms.TextBox();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.Titulolabel = new System.Windows.Forms.Label();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UsuariosdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.UsuariosdataGridView.Name = "UsuariosdataGridView";
             this.UsuariosdataGridView.ReadOnly = true;
             this.UsuariosdataGridView.RowHeadersVisible = false;
-            this.UsuariosdataGridView.Size = new System.Drawing.Size(592, 226);
+            this.UsuariosdataGridView.Size = new System.Drawing.Size(592, 235);
             this.UsuariosdataGridView.TabIndex = 0;
             // 
             // BuscarcomboBox
@@ -109,7 +109,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Cantlabel.AutoSize = true;
             this.Cantlabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantlabel.Location = new System.Drawing.Point(12, 356);
+            this.Cantlabel.Location = new System.Drawing.Point(12, 369);
             this.Cantlabel.Name = "Cantlabel";
             this.Cantlabel.Size = new System.Drawing.Size(184, 14);
             this.Cantlabel.TabIndex = 5;
@@ -120,11 +120,23 @@
             this.CanttextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CanttextBox.Location = new System.Drawing.Point(195, 354);
+            this.CanttextBox.Location = new System.Drawing.Point(195, 367);
             this.CanttextBox.Name = "CanttextBox";
             this.CanttextBox.ReadOnly = true;
-            this.CanttextBox.Size = new System.Drawing.Size(271, 20);
+            this.CanttextBox.Size = new System.Drawing.Size(328, 20);
             this.CanttextBox.TabIndex = 6;
+            // 
+            // Titulolabel
+            // 
+            this.Titulolabel.AutoSize = true;
+            this.Titulolabel.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulolabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Titulolabel.Location = new System.Drawing.Point(209, 20);
+            this.Titulolabel.Name = "Titulolabel";
+            this.Titulolabel.Size = new System.Drawing.Size(212, 23);
+            this.Titulolabel.TabIndex = 23;
+            this.Titulolabel.Text = "Consulta de Usuarios";
             // 
             // Buscarbutton
             // 
@@ -143,25 +155,13 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // Titulolabel
-            // 
-            this.Titulolabel.AutoSize = true;
-            this.Titulolabel.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titulolabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Titulolabel.Location = new System.Drawing.Point(209, 20);
-            this.Titulolabel.Name = "Titulolabel";
-            this.Titulolabel.Size = new System.Drawing.Size(212, 23);
-            this.Titulolabel.TabIndex = 23;
-            this.Titulolabel.Text = "Consulta de Usuarios";
-            // 
             // UsuariosConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(616, 386);
+            this.ClientSize = new System.Drawing.Size(616, 399);
             this.Controls.Add(this.Titulolabel);
             this.Controls.Add(this.CanttextBox);
             this.Controls.Add(this.Cantlabel);

@@ -41,6 +41,7 @@
             this.Buscarlabel = new System.Windows.Forms.Label();
             this.BuscarcomboBox = new System.Windows.Forms.ComboBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VentasdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +73,7 @@
             // 
             // HastadateTimePicker
             // 
+            this.HastadateTimePicker.Enabled = false;
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastadateTimePicker.Location = new System.Drawing.Point(314, 60);
             this.HastadateTimePicker.MaxDate = new System.DateTime(2020, 12, 11, 0, 0, 0, 0);
@@ -82,6 +84,7 @@
             // 
             // DesdedateTimePicker
             // 
+            this.DesdedateTimePicker.Enabled = false;
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.Location = new System.Drawing.Point(115, 60);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
@@ -115,7 +118,7 @@
             this.VentasdataGridView.Name = "VentasdataGridView";
             this.VentasdataGridView.ReadOnly = true;
             this.VentasdataGridView.RowHeadersVisible = false;
-            this.VentasdataGridView.Size = new System.Drawing.Size(645, 213);
+            this.VentasdataGridView.Size = new System.Drawing.Size(645, 216);
             this.VentasdataGridView.TabIndex = 8;
             // 
             // CanttextBox
@@ -176,7 +179,8 @@
             this.BuscarcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BuscarcomboBox.FormattingEnabled = true;
             this.BuscarcomboBox.Items.AddRange(new object[] {
-            "VentaId"});
+            "VentaId",
+            "UsuarioId"});
             this.BuscarcomboBox.Location = new System.Drawing.Point(68, 85);
             this.BuscarcomboBox.Name = "BuscarcomboBox";
             this.BuscarcomboBox.Size = new System.Drawing.Size(124, 21);
@@ -200,13 +204,30 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Imprimirbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Imprimirbutton.Image = global::GCTickets.Properties.Resources._1459716739_News;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Imprimirbutton.Location = new System.Drawing.Point(582, 344);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 46);
+            this.Imprimirbutton.TabIndex = 27;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
             // VentasConsultaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(669, 379);
+            this.ClientSize = new System.Drawing.Size(669, 393);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HastadateTimePicker);
@@ -223,7 +244,7 @@
             this.MaximizeBox = false;
             this.Name = "VentasConsultaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentasConsultaForm";
+            this.Text = "GC Tickets";
             this.Load += new System.EventHandler(this.VentasConsultaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VentasdataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -245,5 +266,6 @@
         private System.Windows.Forms.TextBox BuscartextBox;
         private System.Windows.Forms.Label Buscarlabel;
         private System.Windows.Forms.ComboBox BuscarcomboBox;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

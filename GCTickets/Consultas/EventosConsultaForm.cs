@@ -69,5 +69,16 @@ namespace GCTickets.Consultas
             EventosdataGridView.DataSource = Evento.Listado("EventoId, TipoEventoId, NombreEvento, FechaEvento, LugarEvento", filtro, "");
             CanttextBox.Text = EventosdataGridView.RowCount.ToString();
         }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {          
+            ReporteGCTickets reporte = new ReporteGCTickets();
+            DataTable dt = new DataTable();
+            dt = (DataTable)EventosdataGridView.DataSource;
+            dt.TableName = "GCTicketsDataSet";
+            reporte.Reporte = "GCTicketsReport.rdlc";
+            reporte.Data = dt;
+            reporte.ShowDialog();
+        }
     }
 }

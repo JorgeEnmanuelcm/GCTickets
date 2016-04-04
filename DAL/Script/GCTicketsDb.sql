@@ -31,7 +31,7 @@
 
 --create table EventosDetalle(
 --Id int primary key identity(1,1),
---EventoId int foreign key references Eventos(EventoId),
+--EventoId int references Eventos(EventoId),
 --Descripcion varchar(12),
 --CantDisponible int,
 --PrecioTicket int
@@ -39,9 +39,16 @@
 
 --create table Ventas(
 --VentaId int primary key identity(1,1),
---EventoId int foreign key references Eventos(EventoId),
+--UsuarioId int references Usuarios(UsuarioId),
 --Fecha varchar(12),
---TipoDePago int,
---Total float,
---UsuarioId int foreign key references Usuarios(UsuarioId),
+--Ticket int,
+--Cantidad int,
+--Descripcion varchar(60),
+--Total int
 --)
+
+--create table VentasDetalle(
+--VentaId int references Ventas(VentaId),
+--EventoId int references Eventos(EventoId)
+--)
+
