@@ -39,7 +39,7 @@ namespace GCTickets.Registros
             LugarEventotextBox.Clear();
             EventodateTimePicker.ResetText();
             EventodataGridView.Rows.Clear();
-            TipoEventocomboBox.SelectedIndex = 0;
+            TipoEventocomboBox.SelectedIndex = -1;
             DescripciontextBox.Clear();
             CantDisptextBox.Clear();
             PrecioTtextBox.Clear();
@@ -65,15 +65,14 @@ namespace GCTickets.Registros
         {
             bool Retorno = true;
             Error.Clear();
-            if ((int)TipoEventocomboBox.SelectedValue == 0)
+            if ((int)TipoEventocomboBox.SelectedValue > 0)
             {
-                Error.SetError(TipoEventocomboBox, "Debe seleccionar un tipo de evento");
-                Retorno = false;
+                Evento.TipoEventoId = (int)TipoEventocomboBox.SelectedValue;
             }
             else
             {
-                Evento.TipoEventoId =(int)TipoEventocomboBox.SelectedValue;
-                Error.Clear();
+                Error.SetError(TipoEventocomboBox, "Debe seleccionar un tipo de evento");
+                Retorno = false;
             }
             if (NombreEventotextBox.Text.Length > 0)
             {
@@ -102,12 +101,34 @@ namespace GCTickets.Registros
                 Error.SetError(LugarEventotextBox, "Debe Ingresar un lugar al evento");
                 Retorno = false; 
             }
-
-            foreach (var at in Evento.Detalle)
+            if (EventodataGridView.Rows.Count > 0)
             {
-                EventodataGridView.Rows.Add(at.Descripcion, at.CantDisponible, at.PrecioTicket);
+                foreach (DataGridViewRow item in EventodataGridView.Rows)
+                {
+                    Evento.AgregarTickets(item.Cells["Descripcion"].Value.ToString(), (int)item.Cells["CantDisponible"].Value, (int)item.Cells["PrecioTicket"].Value);
+                    //EventodataGridView.Rows.Add(item.Descripcion, item.CantDisponible, item.PrecioTicket);
+                }
             }
+            else
+            {
+                MensajeError("Error al guardar debido a que no agrego taquillas!!!");
+                Retorno = false;
+            }
+
             return Retorno;
+        }
+
+        private void DevolverDatos()
+        {
+            TipoEventocomboBox.Text = Evento.TipoEventoId.ToString();
+            NombreEventotextBox.Text = Evento.NombreEvento.ToString();
+            EventodateTimePicker.Text = Evento.FechaEvento.ToString();
+            LugarEventotextBox.Text = Evento.LugarEvento.ToString();
+            foreach (var item in Evento.Detalle)
+            {
+                EventodataGridView.Rows.Add(item.Descripcion, item.CantDisponible, item.PrecioTicket);
+            }
+
         }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
@@ -117,17 +138,18 @@ namespace GCTickets.Registros
             int pre = 0;
             int.TryParse(CantDisptextBox.Text, out cant);
             int.TryParse(PrecioTtextBox.Text, out pre); 
-            if (!DescripciontextBox.Text.Equals(""))
+
+            if (!DescripciontextBox.Text.Equals("") && !CantDisptextBox.Text.Equals("") && !PrecioTtextBox.Text.Equals(""))
             {
-                EventodataGridView.Rows.Add(DescripciontextBox.Text, CantDisptextBox.Text, PrecioTtextBox.Text);
-                Evento.AgregarTickets(DescripciontextBox.Text, cant, pre);
+                EventodataGridView.Rows.Add(DescripciontextBox.Text, cant, pre);
+               // Evento.AgregarTickets(DescripciontextBox.Text, cant, pre);
                 DescripciontextBox.Clear();
                 CantDisptextBox.Clear();
                 PrecioTtextBox.Clear();
             }
             else
             {
-                MensajeError("Error!!!");
+                MensajeError("Error al agregar debido a que hay campos vacios!!!");
             }
         }
 
@@ -135,11 +157,11 @@ namespace GCTickets.Registros
         {
             if (ObtenerDatos())
             {
-                if (EventoIdtextBox.Text.Length == 0 && EventodataGridView.RowCount > 0)
+                if (EventoIdtextBox.Text.Length == 0 && EventodataGridView.Rows.Count > 0)
                 {
                     if (Evento.Insertar())
                     {
-                        MensajeOk("Se han iguardado los datos correctamente");
+                        MensajeOk("Se han guardado los datos correctamente");
                         Limpiar();
                     }
                     else
@@ -148,7 +170,7 @@ namespace GCTickets.Registros
 
                     }
                 }
-                if (EventoIdtextBox.Text.Length > 0 && EventodataGridView.RowCount > 0)
+                if (EventoIdtextBox.Text.Length > 0 && EventodataGridView.Rows.Count > 0)
                 {
                     if (Evento.Editar())
                     {
@@ -181,8 +203,7 @@ namespace GCTickets.Registros
                 SiNo = MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (SiNo == System.Windows.Forms.DialogResult.Yes)
                 {
-                    ObtenerDatos();
-                    if (Evento.Buscar(Evento.EventoId))
+                    if (EventoIdtextBox.Text.Length > 0 && Evento.Buscar(Evento.EventoId))
                     {
                         if (Evento.Eliminar())
                         {
@@ -214,6 +235,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -231,6 +253,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -245,9 +268,10 @@ namespace GCTickets.Registros
 
         private void DescripciontextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -265,6 +289,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -282,6 +307,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -299,6 +325,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -308,6 +335,30 @@ namespace GCTickets.Registros
             if (e.KeyChar == 13)
             {
                 Buscarbutton.Focus();
+            }
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            int id;
+            int.TryParse(EventoIdtextBox.Text, out id);
+            if (id < 0)
+            {
+                MessageBox.Show("Debe insertar un Id", "Error al Buscar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (Evento.Buscar(id))
+                {
+                    Eliminarbutton.Enabled = true;
+                    Guardarbutton.Text = "Modificar";
+                    DevolverDatos();
+                }
+                else
+                {
+                    MensajeAdvertencia("Id no encontrado o no existe");
+                    Limpiar();
+                }
             }
         }
     }

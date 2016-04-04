@@ -22,7 +22,7 @@ namespace GCTickets
             InitializeComponent();
         }
 
-        private void Limpiar()
+        public void Limpiar()
         {
             NombreUsuariotextBox.Clear();
             ContraseniatextBox.Clear();
@@ -67,6 +67,7 @@ namespace GCTickets
                 {
                     if(NombreUsuariotextBox.Text == Usuario.NombreUsuario &&  ContraseniatextBox.Text == Usuario.Contrasenia)
                     {
+                        Portada.Usuariolabel.Text = NombreUsuariotextBox.Text;
                         Portada.Show();
                         this.Visible = false;
                     }
@@ -94,6 +95,7 @@ namespace GCTickets
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -111,6 +113,7 @@ namespace GCTickets
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {

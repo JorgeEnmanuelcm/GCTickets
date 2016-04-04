@@ -27,6 +27,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 46) || (e.KeyChar == 44) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -44,6 +45,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -113,7 +115,7 @@ namespace GCTickets.Registros
                 {
                     if (TipoEvento.Insertar())
                     {
-                        MensajeOk("Se han iguardado los datos correctamente");
+                        MensajeOk("Se han guardado los datos correctamente");
                         Limpiar();
                     }
                     else

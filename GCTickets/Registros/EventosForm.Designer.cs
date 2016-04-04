@@ -34,12 +34,7 @@
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantDisponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioTicket = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Agregarbutton = new System.Windows.Forms.Button();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
             this.EventodateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.TipoEventocomboBox = new System.Windows.Forms.ComboBox();
             this.EventoIdtextBox = new System.Windows.Forms.TextBox();
             this.PrecioTtextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +51,12 @@
             this.CantDisplabel = new System.Windows.Forms.Label();
             this.PrecioTlabel = new System.Windows.Forms.Label();
             this.EventoserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Titulolabel = new System.Windows.Forms.Label();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Agregarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.EventodataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EventoserrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -70,11 +71,11 @@
             this.Descripcion,
             this.CantDisponible,
             this.PrecioTicket});
-            this.EventodataGridView.Location = new System.Drawing.Point(316, 217);
+            this.EventodataGridView.Location = new System.Drawing.Point(320, 252);
             this.EventodataGridView.Name = "EventodataGridView";
             this.EventodataGridView.ReadOnly = true;
             this.EventodataGridView.RowHeadersVisible = false;
-            this.EventodataGridView.Size = new System.Drawing.Size(298, 137);
+            this.EventodataGridView.Size = new System.Drawing.Size(298, 128);
             this.EventodataGridView.TabIndex = 0;
             // 
             // Descripcion
@@ -95,98 +96,29 @@
             this.PrecioTicket.Name = "PrecioTicket";
             this.PrecioTicket.ReadOnly = true;
             // 
-            // Agregarbutton
-            // 
-            this.Agregarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Agregarbutton.Image = global::GCTickets.Properties.Resources._1458006586_Add;
-            this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Agregarbutton.Location = new System.Drawing.Point(539, 164);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(75, 47);
-            this.Agregarbutton.TabIndex = 8;
-            this.Agregarbutton.Text = "Agregar";
-            this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
-            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nuevobutton.Image = global::GCTickets.Properties.Resources._1458006564_EditDocument;
-            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(13, 300);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 45);
-            this.Nuevobutton.TabIndex = 0;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guardarbutton.Image = global::GCTickets.Properties.Resources._1458006725_Diskette;
-            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(106, 300);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 45);
-            this.Guardarbutton.TabIndex = 9;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminarbutton.Image = global::GCTickets.Properties.Resources._1458006437_Cancel;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(202, 300);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 45);
-            this.Eliminarbutton.TabIndex = 0;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
             // EventodateTimePicker
             // 
             this.EventodateTimePicker.CustomFormat = "";
             this.EventodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.EventodateTimePicker.Location = new System.Drawing.Point(106, 180);
+            this.EventodateTimePicker.Location = new System.Drawing.Point(110, 215);
             this.EventodateTimePicker.MaxDate = new System.DateTime(2025, 12, 25, 0, 0, 0, 0);
             this.EventodateTimePicker.MinDate = new System.DateTime(2015, 12, 25, 0, 0, 0, 0);
             this.EventodateTimePicker.Name = "EventodateTimePicker";
             this.EventodateTimePicker.Size = new System.Drawing.Size(154, 20);
             this.EventodateTimePicker.TabIndex = 3;
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
-            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Buscarbutton.Location = new System.Drawing.Point(186, 37);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 40);
-            this.Buscarbutton.TabIndex = 0;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            // 
             // TipoEventocomboBox
             // 
             this.TipoEventocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoEventocomboBox.FormattingEnabled = true;
-            this.TipoEventocomboBox.Location = new System.Drawing.Point(106, 91);
+            this.TipoEventocomboBox.Location = new System.Drawing.Point(110, 126);
             this.TipoEventocomboBox.Name = "TipoEventocomboBox";
             this.TipoEventocomboBox.Size = new System.Drawing.Size(154, 21);
             this.TipoEventocomboBox.TabIndex = 1;
             // 
             // EventoIdtextBox
             // 
-            this.EventoIdtextBox.Location = new System.Drawing.Point(106, 39);
+            this.EventoIdtextBox.Location = new System.Drawing.Point(110, 74);
             this.EventoIdtextBox.Name = "EventoIdtextBox";
             this.EventoIdtextBox.Size = new System.Drawing.Size(75, 20);
             this.EventoIdtextBox.TabIndex = 0;
@@ -194,7 +126,7 @@
             // 
             // PrecioTtextBox
             // 
-            this.PrecioTtextBox.Location = new System.Drawing.Point(452, 138);
+            this.PrecioTtextBox.Location = new System.Drawing.Point(456, 173);
             this.PrecioTtextBox.MaxLength = 6;
             this.PrecioTtextBox.Name = "PrecioTtextBox";
             this.PrecioTtextBox.Size = new System.Drawing.Size(162, 20);
@@ -203,7 +135,7 @@
             // 
             // CantDisptextBox
             // 
-            this.CantDisptextBox.Location = new System.Drawing.Point(452, 88);
+            this.CantDisptextBox.Location = new System.Drawing.Point(456, 123);
             this.CantDisptextBox.MaxLength = 6;
             this.CantDisptextBox.Name = "CantDisptextBox";
             this.CantDisptextBox.Size = new System.Drawing.Size(162, 20);
@@ -212,7 +144,7 @@
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(451, 46);
+            this.DescripciontextBox.Location = new System.Drawing.Point(455, 81);
             this.DescripciontextBox.MaxLength = 12;
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(163, 20);
@@ -221,7 +153,7 @@
             // 
             // NombreEventotextBox
             // 
-            this.NombreEventotextBox.Location = new System.Drawing.Point(106, 134);
+            this.NombreEventotextBox.Location = new System.Drawing.Point(110, 169);
             this.NombreEventotextBox.MaxLength = 26;
             this.NombreEventotextBox.Name = "NombreEventotextBox";
             this.NombreEventotextBox.Size = new System.Drawing.Size(154, 20);
@@ -230,7 +162,7 @@
             // 
             // LugarEventotextBox
             // 
-            this.LugarEventotextBox.Location = new System.Drawing.Point(106, 227);
+            this.LugarEventotextBox.Location = new System.Drawing.Point(110, 262);
             this.LugarEventotextBox.MaxLength = 26;
             this.LugarEventotextBox.Name = "LugarEventotextBox";
             this.LugarEventotextBox.Size = new System.Drawing.Size(154, 20);
@@ -241,7 +173,7 @@
             // 
             this.EventoIdlabel.AutoSize = true;
             this.EventoIdlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventoIdlabel.Location = new System.Drawing.Point(37, 42);
+            this.EventoIdlabel.Location = new System.Drawing.Point(41, 77);
             this.EventoIdlabel.Name = "EventoIdlabel";
             this.EventoIdlabel.Size = new System.Drawing.Size(65, 13);
             this.EventoIdlabel.TabIndex = 0;
@@ -251,7 +183,7 @@
             // 
             this.TipoIdlabel.AutoSize = true;
             this.TipoIdlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoIdlabel.Location = new System.Drawing.Point(10, 94);
+            this.TipoIdlabel.Location = new System.Drawing.Point(14, 129);
             this.TipoIdlabel.Name = "TipoIdlabel";
             this.TipoIdlabel.Size = new System.Drawing.Size(92, 13);
             this.TipoIdlabel.TabIndex = 0;
@@ -261,7 +193,7 @@
             // 
             this.NombreEventolabel.AutoSize = true;
             this.NombreEventolabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreEventolabel.Location = new System.Drawing.Point(8, 137);
+            this.NombreEventolabel.Location = new System.Drawing.Point(12, 172);
             this.NombreEventolabel.Name = "NombreEventolabel";
             this.NombreEventolabel.Size = new System.Drawing.Size(96, 13);
             this.NombreEventolabel.TabIndex = 0;
@@ -271,7 +203,7 @@
             // 
             this.FechaEventolabel.AutoSize = true;
             this.FechaEventolabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaEventolabel.Location = new System.Drawing.Point(17, 180);
+            this.FechaEventolabel.Location = new System.Drawing.Point(21, 215);
             this.FechaEventolabel.Name = "FechaEventolabel";
             this.FechaEventolabel.Size = new System.Drawing.Size(85, 13);
             this.FechaEventolabel.TabIndex = 0;
@@ -281,7 +213,7 @@
             // 
             this.LugarEventolabel.AutoSize = true;
             this.LugarEventolabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LugarEventolabel.Location = new System.Drawing.Point(18, 227);
+            this.LugarEventolabel.Location = new System.Drawing.Point(22, 262);
             this.LugarEventolabel.Name = "LugarEventolabel";
             this.LugarEventolabel.Size = new System.Drawing.Size(84, 13);
             this.LugarEventolabel.TabIndex = 0;
@@ -291,7 +223,7 @@
             // 
             this.Descripcionlabel.AutoSize = true;
             this.Descripcionlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcionlabel.Location = new System.Drawing.Point(370, 46);
+            this.Descripcionlabel.Location = new System.Drawing.Point(374, 81);
             this.Descripcionlabel.Name = "Descripcionlabel";
             this.Descripcionlabel.Size = new System.Drawing.Size(75, 13);
             this.Descripcionlabel.TabIndex = 0;
@@ -301,7 +233,7 @@
             // 
             this.CantDisplabel.AutoSize = true;
             this.CantDisplabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CantDisplabel.Location = new System.Drawing.Point(325, 91);
+            this.CantDisplabel.Location = new System.Drawing.Point(329, 126);
             this.CantDisplabel.Name = "CantDisplabel";
             this.CantDisplabel.Size = new System.Drawing.Size(121, 13);
             this.CantDisplabel.TabIndex = 0;
@@ -311,7 +243,7 @@
             // 
             this.PrecioTlabel.AutoSize = true;
             this.PrecioTlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrecioTlabel.Location = new System.Drawing.Point(363, 141);
+            this.PrecioTlabel.Location = new System.Drawing.Point(367, 176);
             this.PrecioTlabel.Name = "PrecioTlabel";
             this.PrecioTlabel.Size = new System.Drawing.Size(83, 13);
             this.PrecioTlabel.TabIndex = 0;
@@ -321,13 +253,96 @@
             // 
             this.EventoserrorProvider.ContainerControl = this;
             // 
+            // Titulolabel
+            // 
+            this.Titulolabel.AutoSize = true;
+            this.Titulolabel.Font = new System.Drawing.Font("Tahoma", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))));
+            this.Titulolabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Titulolabel.Location = new System.Drawing.Point(201, 21);
+            this.Titulolabel.Name = "Titulolabel";
+            this.Titulolabel.Size = new System.Drawing.Size(220, 25);
+            this.Titulolabel.TabIndex = 22;
+            this.Titulolabel.Text = "Registro de Eventos";
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Image = global::GCTickets.Properties.Resources._1458006602_Magnifier;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Buscarbutton.Location = new System.Drawing.Point(190, 72);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 40);
+            this.Buscarbutton.TabIndex = 0;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eliminarbutton.Image = global::GCTickets.Properties.Resources._1458006437_Cancel;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(206, 335);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 45);
+            this.Eliminarbutton.TabIndex = 0;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guardarbutton.Image = global::GCTickets.Properties.Resources._1458006725_Diskette;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(110, 335);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 45);
+            this.Guardarbutton.TabIndex = 9;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nuevobutton.Image = global::GCTickets.Properties.Resources._1458006564_EditDocument;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(17, 335);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 45);
+            this.Nuevobutton.TabIndex = 0;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // Agregarbutton
+            // 
+            this.Agregarbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agregarbutton.Image = global::GCTickets.Properties.Resources._1458006586_Add;
+            this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Agregarbutton.Location = new System.Drawing.Point(543, 199);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(75, 47);
+            this.Agregarbutton.TabIndex = 8;
+            this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
+            // 
             // EventosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(630, 370);
+            this.ClientSize = new System.Drawing.Size(638, 393);
+            this.Controls.Add(this.Titulolabel);
             this.Controls.Add(this.PrecioTlabel);
             this.Controls.Add(this.CantDisplabel);
             this.Controls.Add(this.Descripcionlabel);
@@ -390,6 +405,7 @@
         private System.Windows.Forms.Label CantDisplabel;
         private System.Windows.Forms.Label PrecioTlabel;
         private System.Windows.Forms.ErrorProvider EventoserrorProvider;
+        private System.Windows.Forms.Label Titulolabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantDisponible;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioTicket;

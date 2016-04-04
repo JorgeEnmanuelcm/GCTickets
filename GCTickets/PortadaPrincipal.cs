@@ -51,8 +51,7 @@ namespace GCTickets
 
         private void PortadaPrincipal_Load(object sender, System.EventArgs e)
         {
-            UsuariosClass user = new UsuariosClass();
-            Usuariolabel.Text = user.NombreUsuario.ToString();
+            
         }
 
         protected override void OnClosed(EventArgs e)
@@ -93,6 +92,41 @@ namespace GCTickets
         {
             Registros.EventosForm Evento = new Registros.EventosForm();
             Evento.Show(); 
+        }
+
+        private void eventosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.EventosConsultaForm consu = new Consultas.EventosConsultaForm();
+            consu.Show();
+        }
+
+        private void Usuariolabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registroVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.VentasForm venta = new Registros.VentasForm();
+            venta.Show();
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AyudaForm ayuda = new AyudaForm();
+            ayuda.Show();
+        }
+
+        private void VentatoolStripButton_Click(object sender, EventArgs e)
+        {
+            Registros.VentasForm venta = new Registros.VentasForm();
+            venta.Show();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.VentasConsultaForm consultaVenta = new Consultas.VentasConsultaForm();
+            consultaVenta.Show();
         }
     }
 }

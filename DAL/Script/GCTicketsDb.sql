@@ -37,3 +37,11 @@
 --PrecioTicket int
 --)
 
+--create table Ventas(
+--VentaId int primary key identity(1,1),
+--EventoId int foreign key references Eventos(EventoId),
+--Fecha varchar(12),
+--TipoDePago int,
+--Total float,
+--UsuarioId int foreign key references Usuarios(UsuarioId),
+--)

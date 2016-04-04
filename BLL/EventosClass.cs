@@ -46,7 +46,7 @@ namespace BLL
 
         public void AgregarTickets(string Descripcion, int CantDisponible, int PrecioTicket)
         {
-            Detalle.Add(new EventosDetalleClass(Descripcion, CantDisponible, PrecioTicket));
+            this.Detalle.Add(new EventosDetalleClass(Descripcion, CantDisponible, PrecioTicket));
         }
 
         public override bool Insertar()
@@ -60,9 +60,9 @@ namespace BLL
                 this.EventoId = Retorno;
                 if (Retorno > 0)
                 {
-                    foreach (EventosDetalleClass NumeroDatos in this.Detalle)
+                    foreach (EventosDetalleClass NumeroDatos in Detalle)
                     {
-                        Conexion.Ejecutar(String.Format("Insert into EventosDetalle(EventoId, Descripcion, CantDisponible, PrecioTicket) Values ({0},'{1}', {2}, {3})", Retorno, this.Descripcion, this.CantDisponible, this.PrecioTicket));
+                        Conexion.Ejecutar(String.Format("Insert into EventosDetalle(EventoId, Descripcion, CantDisponible, PrecioTicket) Values ({0}, '{1}', {2}, {3})", Retorno, NumeroDatos.Descripcion, NumeroDatos.CantDisponible, NumeroDatos.PrecioTicket));
                     }
                 }
             }
@@ -84,7 +84,7 @@ namespace BLL
                     Conexion.Ejecutar(String.Format("Delete from EventosDetalle Where EventoId= {0}", this.EventoId));
                     foreach (EventosDetalleClass Numero in this.Detalle)
                     {
-                        Conexion.Ejecutar(string.Format("Insert into EventosDetalle(EventoId, Descripcion, CantDisponible, PrecioTicket) Values ({0},'{1}',{2},{3})", EventoId, int.Parse(Numero.EventoId.ToString()), Numero.Descripcion, Numero.CantDisponible.ToString(), Numero.PrecioTicket.ToString()));
+                        Conexion.Ejecutar(string.Format("Insert into EventosDetalle(EventoId, Descripcion, CantDisponible, PrecioTicket) Values ({0},'{1}',{2},{3})", this.EventoId, Numero.Descripcion, Numero.CantDisponible, Numero.PrecioTicket));
                     }
                 }
             }
@@ -100,10 +100,7 @@ namespace BLL
             bool Retorno = false;
             try
             {
-                Retorno = Conexion.Ejecutar(String.Format("Delete from Eventos where EventoId= {0}", this.EventoId));
-
-                if (Retorno)
-                    Conexion.Ejecutar(String.Format("Delete from EventosDetalle Where EventoId= {0}", this.EventoId));
+                Retorno = Conexion.Ejecutar(String.Format("Delete from EventosDetalle Where EventoId= {0};" + "Delete from Eventos where EventoId= {0}", this.EventoId));
             }
             catch (Exception ex)
             {
@@ -123,9 +120,14 @@ namespace BLL
                 {
                     this.EventoId= (int)dt.Rows[0]["EventoId"];
                     this.NombreEvento = dt.Rows[0]["NombreEvento"].ToString();
-                    this.FechaEvento = dt.Rows[0]["Fecha"].ToString();
+                    this.FechaEvento = dt.Rows[0]["FechaEvento"].ToString();
                     this.LugarEvento = dt.Rows[0]["LugarEvento"].ToString();
-                   
+                    dtEventDetalle = Conexion.ObtenerDatos(String.Format("select * from EventosDetalle where EventoId=" + IdBuscado));
+                    dtEventDetalle.Clear();
+                    foreach (DataRow row in dtEventDetalle.Rows)
+                    {
+                        AgregarTickets(row["Descripcion"].ToString(), (int)dtEventDetalle.Rows[0]["CantDisponible"], (int)dtEventDetalle.Rows[0]["PrecioTicket"]);
+                    }
                 }
             }
             catch (Exception ex)
@@ -142,12 +144,5 @@ namespace BLL
                 ordenFinal = " Orden by  " + Orden;
             return Conexion.ObtenerDatos("Select " + Campos + " From Eventos Where " + Condicion + Orden);
         }
-
-        //public int ObtenerId(string letra)
-        //{
-        //    DataTable dt = new DataTable();
-        //   dt = Conexion.ObtenerDatos("select TipoEventoId from TipoEvento where Descripcion = '" + letra + "'");
-        //   return (int)dt.Rows[0]["TipoEventoId"]; 
-        //}
     }
 }

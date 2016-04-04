@@ -11,11 +11,16 @@ using BLL;
 
 namespace GCTickets.Consultas
 {
-    public partial class TipoEventoConsulta : Form
-    { 
-        public TipoEventoConsulta()
+    public partial class VentasConsultaForm : Form
+    {
+        public VentasConsultaForm()
         {
             InitializeComponent();
+        }
+
+        private void Cantlabel_Click(object sender, EventArgs e)
+        {
+
         }
 
         ErrorProvider Error = new ErrorProvider();
@@ -23,7 +28,7 @@ namespace GCTickets.Consultas
         private void BuscartextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 13) || (e.KeyChar == 127) || (e.KeyChar == 32))
-            { 
+            {
                 e.Handled = false;
                 Error.Clear();
             }
@@ -43,30 +48,27 @@ namespace GCTickets.Consultas
             BuscartextBox.ReadOnly = false;
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            Error.Clear();
-            TipoEventoClass Consulta = new TipoEventoClass();
-            string filtro = "1=1";
-            if (BuscartextBox.Text.Length > 0)
-            {
-                if(BuscarcomboBox.SelectedIndex == 0)
-                {
-                    filtro ="TipoEventoId like '%" + BuscartextBox.Text + "%'";
-                }
-                else if(BuscarcomboBox.SelectedIndex == 1)
-                {
-                    filtro = "Descripcion like '%" + BuscartextBox.Text + "%'";
-                }
-            }
-            TipoEventodataGridView.DataSource = Consulta.Listado("TipoEventoId, Descripcion", filtro, "");
-            CanttextBox.Text = TipoEventodataGridView.RowCount.ToString();
-            }
-
-        private void TipoEventoConsulta_Load(object sender, EventArgs e)
+        private void VentasConsultaForm_Load(object sender, EventArgs e)
         {
             BuscartextBox.ReadOnly = true;
         }
-    }
-    }
 
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            Error.Clear();
+            //VentasClass Consulta = new VentasClass();
+            string filtro = "1=1";
+            if (BuscartextBox.Text.Length > 0)
+            {
+                if (BuscarcomboBox.SelectedIndex == 0)
+                {
+                    filtro = "VentaId like '%" + BuscartextBox.Text + "%'";
+                }
+                
+            }
+           // VentasdataGridView.DataSource = Consulta.Listado("VentaId", filtro, "");
+            CanttextBox.Text = VentasdataGridView.RowCount.ToString();
+        }
+    }
+    }
+}

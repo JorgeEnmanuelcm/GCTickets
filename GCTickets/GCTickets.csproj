@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\EventosConsultaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\EventosConsultaForm.Designer.cs">
+      <DependentUpon>EventosConsultaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\TipoEventoConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,18 @@
     </Compile>
     <Compile Include="Consultas\UsuariosConsulta.Designer.cs">
       <DependentUpon>UsuariosConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AyudaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyudaForm.Designer.cs">
+      <DependentUpon>AyudaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\VentasConsultaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\VentasConsultaForm.Designer.cs">
+      <DependentUpon>VentasConsultaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GCTicketsAboutBox.cs">
       <SubType>Form</SubType>
@@ -129,17 +147,32 @@
     <Compile Include="Registros\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\VentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\VentasForm.Designer.cs">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipoEventoReporteVisor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TipoEventoReporteVisor.Designer.cs">
       <DependentUpon>TipoEventoReporteVisor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas\EventosConsultaForm.resx">
+      <DependentUpon>EventosConsultaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\TipoEventoConsulta.resx">
       <DependentUpon>TipoEventoConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\UsuariosConsulta.resx">
       <DependentUpon>UsuariosConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AyudaForm.resx">
+      <DependentUpon>AyudaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\VentasConsultaForm.resx">
+      <DependentUpon>VentasConsultaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCTicketsAboutBox.resx">
       <DependentUpon>GCTicketsAboutBox.cs</DependentUpon>
@@ -166,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\UsuariosForm.resx">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\VentasForm.resx">
+      <DependentUpon>VentasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\TipoEventoReport.rdlc" />
     <EmbeddedResource Include="TipoEventoReporteVisor.resx">

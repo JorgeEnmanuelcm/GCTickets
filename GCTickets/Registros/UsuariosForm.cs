@@ -317,6 +317,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -334,6 +335,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -351,6 +353,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 32) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -368,6 +371,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 32) || (e.KeyChar == 35) || (e.KeyChar == 44) || (e.KeyChar == 46) || (e.KeyChar == 47) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -385,6 +389,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 64) || (e.KeyChar == 46) || (e.KeyChar == 95) || (e.KeyChar == 45) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -403,6 +408,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -420,6 +426,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -437,6 +444,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 95) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {
@@ -454,6 +462,7 @@ namespace GCTickets.Registros
             if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar == 8) || (e.KeyChar == 127) || (e.KeyChar == 13))
             {
                 e.Handled = false;
+                Error.Clear();
             }
             else
             {

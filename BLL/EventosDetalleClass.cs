@@ -4,14 +4,16 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using System.Data;
 
 namespace BLL
 {
     public class EventosDetalleClass
     {
-        [Browsable(false)]
+        //[Browsable(false)]
         public int Id { get; set; }
-        [Browsable(false)]
+        //[Browsable(false)]
         public int EventoId { get; set; }
 
         public string Descripcion { get; set; }
@@ -32,6 +34,15 @@ namespace BLL
             this.Descripcion = descripcion;
             this.CantDisponible = cantdisponible;
             this.PrecioTicket = precioticket;
+        }
+
+        public DataTable Listado(string Campos, string Condicion, string Orden)
+        {
+            ConexionDb Conexion = new ConexionDb();
+            string ordenFinal = "";
+            if (!Orden.Equals(""))
+                ordenFinal = " Orden by  " + Orden;
+            return Conexion.ObtenerDatos("Select " + Campos + " From EventosDetalle Where " + Condicion + Orden);
         }
 
     }
