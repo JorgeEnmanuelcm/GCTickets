@@ -78,11 +78,18 @@ namespace GCTickets.Consultas
         {
             ReporteGCTickets reporte = new ReporteGCTickets();
             DataTable dt = new DataTable();
-            dt = (DataTable)VentasdataGridView.DataSource;
-            dt.TableName = "VentasDataSet";
-            reporte.Reporte = "VentasReport.rdlc";
-            reporte.Data = dt;
-            reporte.ShowDialog();
+
+            if(VentasdataGridView.Rows.Count > 0) { 
+                dt = (DataTable)VentasdataGridView.DataSource;
+                dt.TableName = "VentasDataSet";
+                reporte.Reporte = "VentasReport.rdlc";
+                reporte.Data = dt;
+                reporte.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Antes de Imprimir debe buscar una venta.");
+            }
         }
     }
     }

@@ -74,11 +74,18 @@ namespace GCTickets.Consultas
         {          
             ReporteGCTickets reporte = new ReporteGCTickets();
             DataTable dt = new DataTable();
-            dt = (DataTable)EventosdataGridView.DataSource;
-            dt.TableName = "GCTicketsDataSet";
-            reporte.Reporte = "GCTicketsReport.rdlc";
-            reporte.Data = dt;
-            reporte.ShowDialog();
+
+            if(EventosdataGridView.Rows.Count > 0) { 
+                dt = (DataTable)EventosdataGridView.DataSource;
+                dt.TableName = "GCTicketsDataSet";
+                reporte.Reporte = "GCTicketsReport.rdlc";
+                reporte.Data = dt;
+                reporte.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Antes de Imprimir debe buscar una evento.");
+            }
         }
     }
 }

@@ -354,8 +354,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>VentasDataSet</DataSetName>
-        <Top>1.79599cm</Top>
-        <Left>0.28787cm</Left>
+        <Top>2.11349cm</Top>
+        <Left>3.17183cm</Left>
         <Height>1.2cm</Height>
         <Width>12.26188cm</Width>
         <Style>
@@ -381,8 +381,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.26085cm</Top>
-        <Left>0.28787cm</Left>
+        <Top>0.54307cm</Top>
+        <Left>2.82787cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -413,8 +413,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.60537cm</Top>
-        <Left>10.40726cm</Left>
+        <Top>0.54307cm</Top>
+        <Left>13.5835cm</Left>
         <Height>0.6cm</Height>
         <Width>2.14249cm</Width>
         <ZIndex>2</ZIndex>
@@ -443,8 +443,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Total</rd:DefaultName>
-        <Top>3.84293cm</Top>
-        <Left>10.42017cm</Left>
+        <Top>4.08988cm</Top>
+        <Left>13.30413cm</Left>
         <Height>0.6cm</Height>
         <Width>2.12958cm</Width>
         <ZIndex>3</ZIndex>
@@ -474,8 +474,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.17238cm</Top>
-        <Left>10.42017cm</Left>
+        <Top>3.4546cm</Top>
+        <Left>13.30413cm</Left>
         <Height>0.6cm</Height>
         <Width>2.12958cm</Width>
         <ZIndex>4</ZIndex>
@@ -505,8 +505,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Fecha</rd:DefaultName>
-        <Top>1.03724cm</Top>
-        <Left>0.28787cm</Left>
+        <Top>1.21363cm</Top>
+        <Left>2.82787cm</Left>
         <Height>0.65292cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>5</ZIndex>
@@ -521,6 +521,18 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Line Name="Line1">
+        <Top>1.9371cm</Top>
+        <Left>2.82787cm</Left>
+        <Height>0cm</Height>
+        <Width>12.89812cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>2in</Height>
     <Style />

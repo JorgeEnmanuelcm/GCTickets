@@ -111,6 +111,7 @@ namespace GCTickets.Registros
             TotaltextBox.Clear();
             VentaIdtextBox.Clear();
             CanttextBox.Clear();
+            DescripcionrichTextBox.Clear();
             VentadataGridView.Rows.Clear();
         }
 

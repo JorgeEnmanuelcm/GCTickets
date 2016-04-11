@@ -118,7 +118,7 @@
             this.VentasdataGridView.Name = "VentasdataGridView";
             this.VentasdataGridView.ReadOnly = true;
             this.VentasdataGridView.RowHeadersVisible = false;
-            this.VentasdataGridView.Size = new System.Drawing.Size(645, 216);
+            this.VentasdataGridView.Size = new System.Drawing.Size(645, 219);
             this.VentasdataGridView.TabIndex = 8;
             // 
             // CanttextBox
@@ -197,7 +197,7 @@
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Buscarbutton.Location = new System.Drawing.Point(567, 60);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(90, 46);
+            this.Buscarbutton.Size = new System.Drawing.Size(90, 49);
             this.Buscarbutton.TabIndex = 14;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -226,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(181)))), ((int)(((byte)(164)))));
-            this.ClientSize = new System.Drawing.Size(669, 393);
+            this.ClientSize = new System.Drawing.Size(669, 396);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
