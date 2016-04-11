@@ -31,7 +31,6 @@ namespace GCTickets.Registros
 
             FechadateTimePicker.Enabled = false;
             Eliminarbutton.Enabled = false;
-            Imprimirbutton.Enabled = false;
 
             EventosDetalleClass det = new EventosDetalleClass();
             TicketcomboBox.DataSource = det.Listado("*", "1=1", "");
@@ -108,10 +107,6 @@ namespace GCTickets.Registros
 
         private void Limpiar()
         {
-            //UsuarioscomboBox.SelectedIndex = -1;
-            //EventocomboBox.SelectedIndex = -1;
-            //TicketcomboBox.SelectedIndex = -1;
-
             EventocomboBox.ResetText();
             TotaltextBox.Clear();
             VentaIdtextBox.Clear();
@@ -222,12 +217,18 @@ namespace GCTickets.Registros
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-            VentadataGridView.Rows.Add(EventocomboBox.SelectedValue, EventocomboBox.Text);
             int precio = 0;
             int cantidad = 0;
             int.TryParse(TicketcomboBox.SelectedValue.ToString(),out precio);
             int.TryParse(CanttextBox.Text,out cantidad);
+            if(CanttextBox.Text.Length > 0) {
+            VentadataGridView.Rows.Add(EventocomboBox.SelectedValue, EventocomboBox.Text);
             TotaltextBox.Text = (precio * cantidad).ToString();
+            }
+            else
+            {
+                MensajeError("Por favor ingrese una cantidad");
+            }
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -321,6 +322,12 @@ namespace GCTickets.Registros
                     }
                 }
             }
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            Consultas.VentasConsultaForm ven = new Consultas.VentasConsultaForm();
+            ven.Show();
         }
     }
 }

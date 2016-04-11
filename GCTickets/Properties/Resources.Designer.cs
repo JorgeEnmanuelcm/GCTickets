@@ -133,6 +133,16 @@ namespace GCTickets.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1458000734_Info {
+            get {
+                object obj = ResourceManager.GetObject("1458000734_Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1458006437_Cancel {
             get {
                 object obj = ResourceManager.GetObject("1458006437_Cancel", resourceCulture);
@@ -206,6 +216,16 @@ namespace GCTickets.Properties {
         internal static System.Drawing.Bitmap _1459716739_News {
             get {
                 object obj = ResourceManager.GetObject("1459716739_News", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1460403824_Exit {
+            get {
+                object obj = ResourceManager.GetObject("1460403824_Exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

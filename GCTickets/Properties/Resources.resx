@@ -157,8 +157,14 @@
   <data name="ticket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticket.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1458000734_Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1458000734_Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1458006437_Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1458006437_Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1459716739_News" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1459716739_News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1458000298_Enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1458000298_Enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +172,7 @@
   <data name="1458006725_Diskette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1458006725_Diskette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1459716739_News" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1459716739_News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1460403824_Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1460403824_Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

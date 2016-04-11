@@ -292,6 +292,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>GCTicketsDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\1460403824_Exit.png" />
+    <None Include="Resources\1458000734_Info.png" />
     <None Include="Resources\1459716739_News.png" />
     <None Include="Resources\ticket.jpg" />
     <None Include="Resources\1458006616_Enter.png" />
